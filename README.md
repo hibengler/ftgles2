@@ -1,13 +1,13 @@
 # IMPORTANT NOTE
 
-This is an experimental version of the FTGLES library for OpenGL ES 2.0.  Use at your own risk, as the library is subject to change.
+This is an experimental version of the FTGLES2 library for OpenGL ES 2.0.  Use at your own risk, as the library is subject to change.
 
 The only demo project that currently supports OpenGL ES 2.0 is [GLES2Demo](https://github.com/cdave1/ftgles/tree/gles2/Demos/iOS/GLES2Demo).  All other demos in this branch default back to OpenGL ES 1.1.
 
 
-# FTGLES 0.2.1
+# FTGLES2 0.2.1
 
-FTGLES is a C++ library for rendering fonts on mobile operating systems with OpenGL ES.  It is a port of [FTGL](http://homepages.paradise.net.nz/henryj/code/#FTGL).  It currently targets the iPhone and iPad, with an Android port in development.  iOS 4.2 is currently supported.
+FTGLES2 is a C++ library for rendering fonts on mobile operating systems with OpenGL ES.  It is a port of FTGLES, whitch iself is a port of [FTGL](http://homepages.paradise.net.nz/henryj/code/#FTGL).  It currently should target the iPhone and iPad,android,linux, and windows.  iOS 4.2 is currently supported.
 
 From the FTGL notes:
 
@@ -25,7 +25,7 @@ See [INSTALL NOTES](http://github.com/cdave1/ftgles/blob/master/INSTALL.md) for 
 
 Include the library in your code:
 	
-	#include "FTGL/ftgles.h"
+	#include "FTGL/ftgles2.h"
 
 Create a font from a truetype file or opentype font:
 	
@@ -43,9 +43,9 @@ The [Hello World Demo](http://github.com/cdave1/ftgles/blob/master/Demos/iOS/Hel
 See the [Demos](http://github.com/cdave1/ftgles/tree/master/iPhone/) folder for several comprehensive sample iPhone apps.  The demo apps include a unicode demo, as well as a demonstration of how to use layouts to easily align and position your text.
 
 
-## Differences between FTGL and FTGLES
+## Differences between FTGL and FTGLES2
 
-FTGLES 0.2.1 supports the following font types from the original FTGL library:
+FTGLES2 0.2.1 supports the following font types from the original FTGL library:
 
  - FTBufferFont
  - FTGLOutlineFont
@@ -70,6 +70,7 @@ There is a [Performance test application](https://github.com/cdave1/ftgles/tree/
 
 ## Licenses
 
- - FTGLES License [here](http://github.com/cdave1/ftgles/blob/master/LICENSE.md)
+ - FTGLES License [here](http://github.com/cdave1/ftgles/blob/master/LICENSE.md) 
+ - FTGLES2 License [here](http://github.com/cdave1/ftgles/blob/master/LICENSE.md)
  - Original FTGL License [here](https://github.com/cdave1/ftgles/blob/master/ftgles/COPYING)
  - Freetype 2 License [here](https://github.com/cdave1/ftgles/blob/master/freetype-2.3.9/docs/LICENSE.TXT)
