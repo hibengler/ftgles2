@@ -1,0 +1,48 @@
+iGLU-1.0.0/libtess/libftgles2_la-geom.lo: iGLU-1.0.0/libtess/geom.c \
+ /usr/include/stdc-predef.h ../src/iGLU-1.0.0/include/gluos.h \
+ /usr/include/assert.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h iGLU-1.0.0/libtess/mesh.h \
+ ../src/iGLU-1.0.0/include/glu.h /usr/include/GLES2/gl2.h \
+ /usr/include/GLES2/gl2platform.h /usr/include/KHR/khrplatform.h \
+ /usr/lib/gcc/x86_64-linux-gnu/5/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/GLES2/gl2ext.h \
+ iGLU-1.0.0/libtess/geom.h
+
+/usr/include/stdc-predef.h:
+
+../src/iGLU-1.0.0/include/gluos.h:
+
+/usr/include/assert.h:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+iGLU-1.0.0/libtess/mesh.h:
+
+../src/iGLU-1.0.0/include/glu.h:
+
+/usr/include/GLES2/gl2.h:
+
+/usr/include/GLES2/gl2platform.h:
+
+/usr/include/KHR/khrplatform.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/5/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/GLES2/gl2ext.h:
+
+iGLU-1.0.0/libtess/geom.h:

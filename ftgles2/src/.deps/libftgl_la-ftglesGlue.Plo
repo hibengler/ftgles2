@@ -1,0 +1,3 @@
+libftgl_la-ftglesGlue.lo: FTGL/ftglesGlue.cpp /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:

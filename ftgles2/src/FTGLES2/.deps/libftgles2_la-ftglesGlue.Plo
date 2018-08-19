@@ -1,0 +1,4 @@
+FTGLES2/libftgles2_la-ftglesGlue.lo: FTGLES2/ftglesGlue.cpp \
+ /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:
