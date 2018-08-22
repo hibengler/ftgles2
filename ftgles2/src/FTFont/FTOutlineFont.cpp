@@ -126,14 +126,9 @@ void FTOutlineFontImpl::PreRender()
     
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // GL_ONE
-	ftglBindTexture(0);
-
-#ifdef FTGLES2
-    //glGetFloatv(GL_CURRENT_COLOR, colors);
-    colors[0] = 1.0f; colors[1] = 1.0f; colors[2] = 1.0f; colors[3] = 1.0f;
-#else
-	glGetFloatv(GL_CURRENT_COLOR, colors);
-#endif
+	
+    ftglBindTexture(0);
+    glGetFloatv(GL_BLEND_COLOR,colors);
     
 	ftglColor4f(colors[0], colors[1], colors[2], colors[3]);
 	ftglBegin(GL_LINES);

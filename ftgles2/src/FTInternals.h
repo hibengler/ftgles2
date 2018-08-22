@@ -64,7 +64,7 @@
 
 #else
 
-#include "FTGLES2/ftglesGlue.h"
+#include "FTGLES2/ftgles2Glue.h"
 
 #endif
 

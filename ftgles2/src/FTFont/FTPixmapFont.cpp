@@ -98,13 +98,20 @@ inline FTPoint FTPixmapFontImpl::RenderI(const T* string, const int len,
     glDisable(GL_TEXTURE_2D);
 
     GLfloat ftglColour[4];
-    glGetFloatv(GL_CURRENT_RASTER_COLOR, ftglColour);
+
+//   glGetFloatv(GL_CURRENT_RASTER_COLOR, ftglColour);
+    glGetFloatv(GL_BLEND_COLOR, ftglColour);
 
     glPixelTransferf(GL_RED_SCALE, ftglColour[0]);
     glPixelTransferf(GL_GREEN_SCALE, ftglColour[1]);
     glPixelTransferf(GL_BLUE_SCALE, ftglColour[2]);
     glPixelTransferf(GL_ALPHA_SCALE, ftglColour[3]);
 */
+/* kludge */
+    { GLfloat *colors;
+    colors = ftgles2DirectAccessToFakeRasterColor();
+     ftglColor4f(colors[0], colors[1], colors[2], colors[3]);
+    }
     FTPoint tmp = FTFontImpl::Render(string, len,
                                      position, spacing, renderMode);
 

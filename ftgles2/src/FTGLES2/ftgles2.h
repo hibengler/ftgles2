@@ -30,6 +30,8 @@
 #define __ftgles__
 #define __ftgles2__
 
+#define FTGLES2 1
+
 /* Floating point types used by the library */
 typedef double   FTGL_DOUBLE;
 typedef float    FTGL_FLOAT;

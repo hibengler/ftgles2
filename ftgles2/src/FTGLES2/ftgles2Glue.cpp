@@ -22,7 +22,7 @@
  
  */
 
-#include "ftglesGlue.h"
+#include "ftgles2Glue.h"
 #include "strings.h"
 
 #define FTGLES_GLUE_MAX_VERTICES 32768

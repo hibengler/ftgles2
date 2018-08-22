@@ -164,7 +164,7 @@ int main(int argc, char **argv)
 
     // Initialise FTGLES2 stuff
 /* Create a pixmap font from a TrueType file. */
-font = ftglCreatePixmapFont(file);
+font = ftglCreateBitmapFont(file);
 
 /* If something went wrong, bail out. */
 if(!font) {

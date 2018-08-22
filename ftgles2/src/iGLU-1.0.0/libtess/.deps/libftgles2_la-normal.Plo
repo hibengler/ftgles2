@@ -3,25 +3,31 @@ iGLU-1.0.0/libtess/libftgles2_la-normal.lo: iGLU-1.0.0/libtess/normal.c \
  iGLU-1.0.0/libtess/mesh.h ../src/iGLU-1.0.0/include/glu.h \
  /usr/include/GLES2/gl2.h /usr/include/GLES2/gl2platform.h \
  /usr/include/KHR/khrplatform.h \
- /usr/lib/gcc/x86_64-linux-gnu/5/include/stdint.h /usr/include/stdint.h \
+ /usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/GLES2/gl2ext.h \
- iGLU-1.0.0/libtess/tess.h /usr/include/setjmp.h \
- /usr/include/x86_64-linux-gnu/bits/setjmp.h \
- /usr/include/x86_64-linux-gnu/bits/sigset.h iGLU-1.0.0/libtess/dict.h \
- iGLU-1.0.0/libtess/priorityq.h iGLU-1.0.0/libtess/priorityq-heap.h \
- iGLU-1.0.0/libtess/normal.h /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/GLES2/gl2ext.h iGLU-1.0.0/libtess/tess.h \
+ /usr/include/setjmp.h /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ iGLU-1.0.0/libtess/dict.h iGLU-1.0.0/libtess/priorityq.h \
+ iGLU-1.0.0/libtess/priorityq-heap.h iGLU-1.0.0/libtess/normal.h \
+ /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
- /usr/include/x86_64-linux-gnu/bits/huge_val.h \
- /usr/include/x86_64-linux-gnu/bits/huge_valf.h \
- /usr/include/x86_64-linux-gnu/bits/huge_vall.h \
- /usr/include/x86_64-linux-gnu/bits/inf.h \
- /usr/include/x86_64-linux-gnu/bits/nan.h \
- /usr/include/x86_64-linux-gnu/bits/mathdef.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+ /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h /usr/include/assert.h
 
 /usr/include/stdc-predef.h:
@@ -38,9 +44,11 @@ iGLU-1.0.0/libtess/mesh.h:
 
 /usr/include/KHR/khrplatform.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/5/include/stdint.h:
+/usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h:
 
 /usr/include/stdint.h:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /usr/include/features.h:
 
@@ -48,11 +56,21 @@ iGLU-1.0.0/libtess/mesh.h:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/GLES2/gl2ext.h:
 
@@ -62,7 +80,7 @@ iGLU-1.0.0/libtess/tess.h:
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
-/usr/include/x86_64-linux-gnu/bits/sigset.h:
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
 iGLU-1.0.0/libtess/dict.h:
 
@@ -78,17 +96,17 @@ iGLU-1.0.0/libtess/normal.h:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
-/usr/include/x86_64-linux-gnu/bits/huge_val.h:
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
 
-/usr/include/x86_64-linux-gnu/bits/huge_valf.h:
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
-/usr/include/x86_64-linux-gnu/bits/huge_vall.h:
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
-/usr/include/x86_64-linux-gnu/bits/inf.h:
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
-/usr/include/x86_64-linux-gnu/bits/nan.h:
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
-/usr/include/x86_64-linux-gnu/bits/mathdef.h:
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 

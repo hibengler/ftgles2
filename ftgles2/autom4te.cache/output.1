@@ -646,6 +646,10 @@ LATEX
 HAVE_DOXYGEN_FALSE
 HAVE_DOXYGEN_TRUE
 DOXYGEN
+HAVE_GLUT_FALSE
+HAVE_GLUT_TRUE
+GLUT_LIBS
+GLUT_CFLAGS
 HAVE_CPPUNIT_FALSE
 HAVE_CPPUNIT_TRUE
 CPPUNIT_LIBS
@@ -823,7 +827,9 @@ PKG_CONFIG
 PKG_CONFIG_PATH
 PKG_CONFIG_LIBDIR
 CPPUNIT_CFLAGS
-CPPUNIT_LIBS'
+CPPUNIT_LIBS
+GLUT_CFLAGS
+GLUT_LIBS'
 
 
 # Initialize some variables set by options.
@@ -1511,6 +1517,8 @@ Some influential environment variables:
               C compiler flags for CPPUNIT, overriding pkg-config
   CPPUNIT_LIBS 
               linker flags for CPPUNIT, overriding pkg-config
+  GLUT_CFLAGS C compiler flags for GLUT, overriding pkg-config
+  GLUT_LIBS   linker flags for GLUT, overriding pkg-config
 
 Use these variables to override the choices made by `configure' or to help
 it to find libraries and programs with nonstandard names/locations.
@@ -17022,6 +17030,8 @@ FTGL_CHECK_FONT
 
 
 
+
+
 if test "x$ac_cv_env_PKG_CONFIG_set" != "xset"; then
 	if test -n "$ac_tool_prefix"; then
   # Extract the first word of "${ac_tool_prefix}pkg-config", so it can be a program name with args.
@@ -17214,6 +17224,89 @@ $as_echo "$CPPUNIT" >&6; }
 else
   HAVE_CPPUNIT_TRUE='#'
   HAVE_CPPUNIT_FALSE=
+fi
+
+
+
+
+pkg_failed=no
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for GLUT" >&5
+$as_echo_n "checking for GLUT... " >&6; }
+
+if test -n "$GLUT_CFLAGS"; then
+    pkg_cv_GLUT_CFLAGS="$GLUT_CFLAGS"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"glut\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "glut") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_GLUT_CFLAGS=`$PKG_CONFIG --cflags "glut" 2>/dev/null`
+		      test "x$?" != "x0" && pkg_failed=yes 
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+if test -n "$GLUT_LIBS"; then
+    pkg_cv_GLUT_LIBS="$GLUT_LIBS"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"glut\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "glut") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_GLUT_LIBS=`$PKG_CONFIG --libs "glut" 2>/dev/null`
+		      test "x$?" != "x0" && pkg_failed=yes 
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+
+
+
+if test $pkg_failed = yes; then
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+        
+if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
+        _pkg_short_errors_supported=yes
+else
+        _pkg_short_errors_supported=no
+fi
+        if test $_pkg_short_errors_supported = yes; then
+	        GLUT_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "glut" 2>&1`
+        else 
+	        GLUT_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "glut" 2>&1`
+        fi
+	# Put the nasty error message in config.log where it belongs
+	echo "$GLUT_PKG_ERRORS" >&5
+
+	GLUT="no"
+elif test $pkg_failed = untried; then
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+	GLUT="no"
+else
+	GLUT_CFLAGS=$pkg_cv_GLUT_CFLAGS
+	GLUT_LIBS=$pkg_cv_GLUT_LIBS
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+$as_echo "yes" >&6; }
+	GLUT="yes"
+fi
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $GLUT" >&5
+$as_echo "$GLUT" >&6; }
+ if test "x$GLUT" != "xno"; then
+  HAVE_GLUT_TRUE=
+  HAVE_GLUT_FALSE='#'
+else
+  HAVE_GLUT_TRUE='#'
+  HAVE_GLUT_FALSE=
 fi
 
 
@@ -17653,6 +17746,10 @@ Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${HAVE_CPPUNIT_TRUE}" && test -z "${HAVE_CPPUNIT_FALSE}"; then
   as_fn_error $? "conditional \"HAVE_CPPUNIT\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
+if test -z "${HAVE_GLUT_TRUE}" && test -z "${HAVE_GLUT_FALSE}"; then
+  as_fn_error $? "conditional \"HAVE_GLUT\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${HAVE_DOXYGEN_TRUE}" && test -z "${HAVE_DOXYGEN_FALSE}"; then
@@ -19350,7 +19447,6 @@ $as_echo X"$file" |
     cat <<_LT_EOF >> "$cfgfile"
 #! $SHELL
 # Generated automatically by $as_me ($PACKAGE) $VERSION
-# Libtool was configured on host `(hostname || uname -n) 2>/dev/null | sed 1q`:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
 # Provide generalized library-building support services.

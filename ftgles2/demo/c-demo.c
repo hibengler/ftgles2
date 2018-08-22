@@ -1,5 +1,5 @@
 /*
- * c-demo.cpp - simple C demo for FTGL, the OpenGL font library
+ * c-demo.c - simple C demo for FTGLES2, the OpenGL font library
  *
  * Copyright (c) 2008 Sam Hocevar <sam@zoy.org>
  *
@@ -36,7 +36,7 @@
 #   error GLUT headers not present
 #endif
 
-#include <FTGL/ftgl.h>
+#include <FTGLES2/ftgles2.h>
 
 static FTGLfont *font[3];
 static int fontindex = 0;

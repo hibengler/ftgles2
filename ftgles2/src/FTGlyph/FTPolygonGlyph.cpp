@@ -140,10 +140,12 @@ void FTPolygonGlyphImpl::DoRender(const FTPoint& pen)
         const FTTesselation* subMesh = mesh->Tesselation(t);
         unsigned int polygonType = subMesh->PolygonType();
 //		glGetFloatv(GL_CURRENT_COLOR, colors);
+	GLfloat *colors;
+	colors = ftgles2DirectAccessToFakeCurrentColor();
         ftglBindTexture(0);
 		
         ftglBegin(polygonType);
-		ftglColor4f(1.0f, 1.0f, 1.0f, 1.0f);  //colors[0], colors[1], colors[2], colors[3]);
+		ftglColor4f(colors[0], colors[1], colors[2], colors[3]);
 		for(unsigned int i = 0; i < subMesh->PointCount(); ++i)
 		{
 			FTPoint point = subMesh->Point(i);

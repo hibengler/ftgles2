@@ -41,7 +41,7 @@ ftgles2_HEADERS = $(ftgles2_headers)
 
 ftgles2_headers = \
     FTGLES2/ftgles2.h \
-    FTGLES2/ftglesGlue.h \
+    FTGLES2/ftgles2Glue.h \
     FTGLES2/ftgles2Glue.cpp \
     FTGLES2/FTBBox.h \
     FTGLES2/FTBuffer.h \
