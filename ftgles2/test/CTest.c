@@ -411,12 +411,16 @@ static float modelMatrix[16];
 static float MVMatrix[16];
 static float MVPMatrix[16];
 
-#ifdef NOPRECISION_ON_VIDEO
-csfdfa
+
+//vvvvvvvvvvvvvvvvvvvv this one vvvvvvvvvvvvvvvvvvvvvv
+
+
+
 static const GLchar * vertex_shader_text = 
 "attribute vec4 ft_position;\n"
 "attribute vec4 ft_color;\n"
-"attribute vec2 texCoord;\n"
+"attribute vec2 ft_texCoord;\n"
+"varying vec4 ft_colorVarying;\n"
 "varying vec2 ft_texture_coordinate;\n"
 "\n"
 "uniform mat4 ft_camera;\n"
@@ -424,57 +428,47 @@ static const GLchar * vertex_shader_text =
 "void main()\n"
 "{\n"
 "        gl_Position = (ft_camera * ft_position);\n"
-"    ft_texture_coordinate = texCoord;\n"
-"}\n";
-
-static const GLchar*  fragment_shader_text = 
-"varying vec4 colorVarying;\n"
-"varying vec2 texture_coordinate;\n"
-"uniform sampler2D color_sampler;\n"
-"\n"
-"void main()\n"
-"{\n"
-"   gl_FragColor = texture2D(color_sampler, texture_coordinate);\n"
-"}\n";
-#else
-
-
-
-
-
-
-
-
-static const GLchar * vertex_shader_text = 
-"attribute vec4 position;\n"
-"varying vec4 colorVarying;\n"
-"attribute vec2 texCoord;\n"
-"varying vec2 texture_coordinate;\n"
-"\n"
-"uniform mat4 camera;\n"
-"\n"
-"void main()\n"
-"{\n"
-"        gl_Position = (camera * position);\n"
-"    texture_coordinate = texCoord;\n"
-"   gl_FragColor = texture2D(color_sampler, texture_coordinate);\n"
-"    colorVarying = color;\n"
+"        ft_colorVarying = ft_color;\n"
+"        ft_texture_coordinate = ft_texCoord;\n"
 "}\n";
 
 
 //"precision mediump float;\n"
 
 static const GLchar*  fragment_shader_text = 
-"varying vec4 colorVarying;\n"
-"varying vec2 texture_coordinate;\n"
-"uniform sampler2D color_sampler;\n"
+"varying vec4 ft_colorVarying;\n"
+"varying vec2 ft_texture_coordinate;\n"
+"uniform sampler2D ft_color_sampler;\n"
 "\n"
 "void main()\n"
 "{\n"
-"   gl_FragColor = texture2D(color_sampler, texture_coordinate);\n"
+"vec4 fc;\n"
+"float factor;\n"
+"fc = texture2D(ft_color_sampler, ft_texture_coordinate);\n"
+"factor = fc.a;\n"
+"fc.r = ft_colorVarying.r * factor;\n"
+"fc.g = ft_colorVarying.g * factor;\n"
+"fc.b = ft_colorVarying.b * factor;\n"
+"fc.a = 1.;\n"
+"   gl_FragColor =  fc;\n"
 "}\n";
-#endif
 
+static const GLchar*  fragment_shader_textdsfdfdf = 
+"varying vec4 ft_colorVarying;\n"
+"varying vec2 ft_texture_coordinate;\n"
+"uniform sampler2D ft_color_sampler;\n"
+"\n"
+"void main()\n"
+"{\n"
+"vec4 fc;\n"
+"float factor;\n"
+"fc = texture2D(ft_color_sampler, ft_texture_coordinate);\n"
+"factor = 1. - fc.a;\n"
+"fc.r = ft_colorVarying.r * factor;\n"
+"fc.g = ft_colorVarying.g * factor;\n"
+"fc.b = ft_colorVarying.b * factor;\n"
+"   gl_FragColor =  texture2D(ft_color_sampler, ft_texture_coordinate);\n"
+"}\n";
 
 static void printGLString(const char *name, GLenum s) {
     const char *v = (const char *) glGetString(s);
@@ -558,10 +552,11 @@ checkGlError("h");
 
 glBindAttribLocation(shaderProgram, RENDER_ATTRIB_VERTEX, "position");
 glBindAttribLocation(shaderProgram, RENDER_ATTRIB_COLOR, "ft_color");
+glBindAttribLocation(shaderProgram, 2, "ft_texCoord");
 
 glLinkProgram(shaderProgram);
 
-cameraUniform = glGetUniformLocation(shaderProgram, "camera");
+cameraUniform = glGetUniformLocation(shaderProgram, "ft_camera");
 
     glDeleteShader(vertexShader);  
     glDeleteShader(fragmentShader);
@@ -610,19 +605,19 @@ int main(int argc, char *argv[])
                 case GL_NO_ERROR:
                         break;
                 case GL_INVALID_ENUM:
-                        printf("GL Error (%x): GL_INVALID_ENUM\n\n", error);
+                        fprintf(stderr,"GL Error (%x): GL_INVALID_ENUM\n\n", error);
                         break;
                 case GL_INVALID_VALUE:
-                        printf("GL Error (%x): GL_INVALID_VALUE.\n\n", error);
+                        fprintf(stderr,"GL Error (%x): GL_INVALID_VALUE.\n\n", error);
                         break;
                 case GL_INVALID_OPERATION:
-                        printf("GL Error (%x): GL_INVALID_OPERATION.\n\n", error);
+                        fprintf(stderr,"GL Error (%x): GL_INVALID_OPERATION.\n\n", error);
                         break;
                 case GL_OUT_OF_MEMORY:
-                        printf("GL Error (%x): GL_OUT_OF_MEMORY.\n\n", error);
+                        fprintf(stderr,"GL Error (%x): GL_OUT_OF_MEMORY.\n\n", error);
                         break;
                 default:
-                        printf("GL Error (%x):\n\n", error);
+                        fprintf(stderr,"GL Error (%x):\n\n", error);
                         break;
         }
     glUseProgram(shaderProgram);
@@ -637,8 +632,10 @@ int main(int argc, char *argv[])
     for(i = 0; i < 6; i++)  ftglSetFontFaceSize(f[i], 72, 72);
        
 
-    for(i = 5; i < 6; i++) {
+    for(i = 0; i < 6; i++) {
       float temp[16];
+      fprintf(stdout,"%d:\n",i);
+      fflush(stdout);
       for (int j=0;j<16;j++)   temp[j]=viewMatrix[j];
 	
 //      aglMatrixMultiply(viewMatrix,temp,plus80);
@@ -653,12 +650,14 @@ int main(int argc, char *argv[])
 
       glUniformMatrix4fv(cameraUniform, 1, GL_FALSE, MVPMatrix);
         char buf[200];
-	sprintf(buf,"hello %d\n",i);
+	int k;
+	for (k=0;k<i;k++) { buf[k*3]=' ';buf[k*3+1]=' ';buf[k*3+2]=' ';}
+	sprintf(buf+k+k+k,"%d\n",i);
         ftglRenderFont(f[i],buf, FTGL_RENDER_ALL);
         }	
    glutSwapBuffers();
 
-sleep(10);
+sleep(3);
     for(i = 0; i < 6; i++)
         ftglDestroyFont(f[i]);
     return 0;

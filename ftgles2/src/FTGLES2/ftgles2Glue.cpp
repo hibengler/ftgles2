@@ -27,13 +27,13 @@
 
 #define FTGLES_GLUE_MAX_VERTICES 32768
 
-
+/*
 enum {
     ATTRIB_VERTEX,
     ATTRIB_COLOR,
     NUM_ATTRIBUTES
 };
-
+*/
 
 typedef struct 
 {
@@ -56,10 +56,10 @@ ftglesGlueArrays_t ftglesGlueArrays;
 GLenum ftglesCurrentPrimitive = GL_TRIANGLES;
 bool ftglesQuadIndicesInitted = false;
 
+float ftgles2_foreground_color[4];	
+float ftgles2_background_color[4];	
 
-
-GLvoid ftglBegin(GLenum prim) 
-{
+static void init_if_first_time(void) {
 	if (!ftglesQuadIndicesInitted)
 	{
 		for (int i = 0; i < FTGLES_GLUE_MAX_VERTICES * 3 / 2; i += 6) 
@@ -74,12 +74,68 @@ GLvoid ftglBegin(GLenum prim)
 			ftglesGlueArrays.quadIndices[i + 5] = q + 3;
 		}
 		ftglesQuadIndicesInitted = true;
-	}
+		for (int i = 0; i < FTGLES_GLUE_MAX_VERTICES * 3 / 2; i += 6) 
+		{
+			int q = i / 6 * 4;
+			ftglesGlueArrays.quadIndices[i + 0] = q + 0;
+			ftglesGlueArrays.quadIndices[i + 1] = q + 1;
+			ftglesGlueArrays.quadIndices[i + 2] = q + 2;
+			
+			ftglesGlueArrays.quadIndices[i + 3] = q + 0;
+			ftglesGlueArrays.quadIndices[i + 4] = q + 2;
+			ftglesGlueArrays.quadIndices[i + 5] = q + 3;
+		}
+		ftglesQuadIndicesInitted = true;
+  ftgles2_foreground_color[0] = 1.f;
+  ftgles2_foreground_color[1] = 1.f;
+  ftgles2_foreground_color[2] = 1.f;
+  ftgles2_foreground_color[3] = 1.f;
+  
+  ftgles2_background_color[0] = 0.f;
+  ftgles2_background_color[1] = 0.f;
+  ftgles2_background_color[2] = 0.f;
+  ftgles2_background_color[3] = 1.f;
+
+  }
+}
+
+
+float *ftgles2DirectAccessToFakeCurrentColor(void) {
+init_if_first_time();
+return ftgles2_background_color;
+}	
+
+
+
+float *ftgles2DirectAccessToFakeRasterColor(void) {
+init_if_first_time();
+return ftgles2_background_color;
+}	
+
+GLvoid ftglBegin(GLenum prim) 
+{
+	init_if_first_time();
+	
     
 	ftglesGlueArrays.currIndex = 0;
 	ftglesCurrentPrimitive = prim;
-	glEnableVertexAttribArray(ATTRIB_VERTEX);
-	glEnableVertexAttribArray(ATTRIB_COLOR);
+	
+        int currentProgram;
+    
+        glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
+        ftglError("xqwwdd1");
+
+	
+			
+        GLint positionLocation = glGetAttribLocation(currentProgram, "ft_position");
+        GLint colorLocation =    glGetAttribLocation(currentProgram, "ft_colorx");
+        ftglError("u1");
+	
+	
+// 	glEnableVertexAttribArray(positionLocation);
+//        ftglError("v1");
+//	glEnableVertexAttribArray(colorLocation);
+//        ftglError("v2");
 }
 
 
@@ -152,102 +208,73 @@ GLvoid bindArrayBuffers()
 
 GLvoid ftglBindTexture(unsigned int textureId)
 {
-    GLint activeTextureID;
+/*    GLint activeTextureID;
     glGetIntegerv(GL_TEXTURE_BINDING_2D, &activeTextureID);
     if((unsigned int)activeTextureID != textureId)
     {
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, textureId);
     }
+*/
 }
 
 
 GLvoid ftglEnd() 
 {
-    /*
-	GLboolean vertexArrayEnabled;
-	GLboolean texCoordArrayEnabled;
-	GLboolean colorArrayEnabled;
-	
-	GLvoid * vertexArrayPointer;
-	GLvoid * texCoordArrayPointer;
-	GLvoid * colorArrayPointer;
-	
-	GLint vertexArrayType, texCoordArrayType, colorArrayType;
-	GLint vertexArraySize, texCoordArraySize, colorArraySize;
-	GLsizei vertexArrayStride, texCoordArrayStride, colorArrayStride;
-	
-	bool resetPointers = false;
-	
-	glGetPointerv(GL_VERTEX_ARRAY_POINTER, &vertexArrayPointer);
-	glGetPointerv(GL_TEXTURE_COORD_ARRAY_POINTER, &texCoordArrayPointer);
-	glGetPointerv(GL_COLOR_ARRAY_POINTER, &colorArrayPointer);
+    ftglError("x");
 
-	glGetBooleanv(GL_VERTEX_ARRAY, &vertexArrayEnabled);
-	glGetBooleanv(GL_TEXTURE_COORD_ARRAY, &texCoordArrayEnabled);
-	glGetBooleanv(GL_COLOR_ARRAY, &colorArrayEnabled);
-
-	if (!vertexArrayEnabled)
-	{
-		glEnableClientState(GL_VERTEX_ARRAY);
-	}
 	
-	if (vertexArrayPointer != &ftglesGlueArrays.vertices[0].xyz)
-	{
-		glGetIntegerv(GL_VERTEX_ARRAY_TYPE, &vertexArrayType);
-		glGetIntegerv(GL_VERTEX_ARRAY_SIZE, &vertexArraySize);
-		glGetIntegerv(GL_VERTEX_ARRAY_STRIDE, &vertexArrayStride);
-		if (texCoordArrayEnabled)
-		{
-			glGetIntegerv(GL_TEXTURE_COORD_ARRAY_TYPE, &texCoordArrayType);
-			glGetIntegerv(GL_TEXTURE_COORD_ARRAY_SIZE, &texCoordArraySize);
-			glGetIntegerv(GL_TEXTURE_COORD_ARRAY_STRIDE, &texCoordArrayStride);
-		}	
-		if (colorArrayEnabled)
-		{
-			glGetIntegerv(GL_COLOR_ARRAY_TYPE, &colorArrayType);
-			glGetIntegerv(GL_COLOR_ARRAY_SIZE, &colorArraySize);
-			glGetIntegerv(GL_COLOR_ARRAY_STRIDE, &colorArrayStride);
-		}
+//		if (colorArrayEnabled)
+
         
 
         
-		//glVertexPointer(3, GL_FLOAT, sizeof(ftglesVertex_t), ftglesGlueArrays.vertices[0].xyz);
-		//glTexCoordPointer(2, GL_FLOAT, sizeof(ftglesVertex_t), ftglesGlueArrays.vertices[0].st);
-		//glColorPointer(4, GL_UNSIGNED_BYTE, sizeof(ftglesVertex_t), ftglesGlueArrays.vertices[0].rgba);
-		
-		resetPointers = true;
-	}
+//	if (!texCoordArrayEnabled)
 	
-	if (!texCoordArrayEnabled)
-		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-	
-	if (!colorArrayEnabled)
-		glEnableClientState(GL_COLOR_ARRAY);
-	*/
     
     int currentProgram;
     
     glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
+    ftglError("x1");
     
     if (currentProgram == 0)
     {
         return;
     }
     
-    GLint texCoordLocation = glGetAttribLocation(currentProgram, "texCoord");
+    GLint texCoordLocation = glGetAttribLocation(currentProgram, "ft_texCoord");
+    ftglError("x1a");
+    GLint positionLocation = glGetAttribLocation(currentProgram, "ft_position");
+    ftglError("x1b");
+    GLint colorLocation =    glGetAttribLocation(currentProgram, "ft_color");
+    ftglError("x1c");
+//    colorLocation=1;
     
 	if (ftglesGlueArrays.currIndex == 0) 
 	{
 		ftglesCurrentPrimitive = 0;
 		return;
 	}
+    ftglError("x2");
     
-    glVertexAttribPointer(ATTRIB_VERTEX, 3, GL_FLOAT, 0, sizeof(ftglesVertex_t), ftglesGlueArrays.vertices[0].xyz);
-    glVertexAttribPointer(ATTRIB_COLOR, 4, GL_UNSIGNED_BYTE, 0, sizeof(ftglesVertex_t), ftglesGlueArrays.vertices[0].rgba);
-	
-    glVertexAttribPointer(texCoordLocation, 2, GL_FLOAT, 0, sizeof(ftglesVertex_t), ftglesGlueArrays.vertices[0].st); 
+fprintf(stderr,"positionlocation %d\n",positionLocation);	
+    glVertexAttribPointer(positionLocation, 3, GL_FLOAT, 0, 
+      sizeof(ftglesVertex_t), &(ftglesGlueArrays.vertices[0].xyz));
+    ftglError("x2a");
+fprintf(stderr,"colorLocation %d\n",colorLocation);	
+    glVertexAttribPointer(colorLocation, 4, GL_UNSIGNED_BYTE, 0, 
+      sizeof(ftglesVertex_t), &(ftglesGlueArrays.vertices[0].rgba));
+    ftglError("x2b");
+fprintf(stderr,"texCoordLocation %d\n",texCoordLocation);	
+    glVertexAttribPointer(texCoordLocation, 2, GL_FLOAT, 0, 
+        sizeof(ftglesVertex_t), &(ftglesGlueArrays.vertices[0].st)); 
+    ftglError("x2c");
+    glEnableVertexAttribArray(positionLocation);
+    ftglError("x2c1");
+    glEnableVertexAttribArray(colorLocation);
+    ftglError("x2c2");
     glEnableVertexAttribArray(texCoordLocation);
+    ftglError("x2c3");
     
 	if (ftglesCurrentPrimitive == GL_QUADS) 
 	{
@@ -261,6 +288,7 @@ GLvoid ftglEnd()
 	ftglesCurrentPrimitive = 0;
     
     
+    ftglError("y");
 	
     /*
 	if (resetPointers)

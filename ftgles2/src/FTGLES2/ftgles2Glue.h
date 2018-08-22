@@ -45,6 +45,10 @@
 extern "C" {
 #endif
 	
+	
+extern GLfloat *ftgles2DirectAccessToFakeRasterColor();
+extern float *ftgles2DirectAccessToFakeCurrentColor();	
+
 	extern void ftglBegin(unsigned int prim);
     
     extern void ftglTranslatef(float x, float y, float z);
