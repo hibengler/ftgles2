@@ -27,13 +27,13 @@
 
 #define FTGLES_GLUE_MAX_VERTICES 32768
 
-/*
+
 enum {
     ATTRIB_VERTEX,
     ATTRIB_COLOR,
-    NUM_ATTRIBUTES
+    ATTRIB_TEXCOORD
 };
-*/
+
 
 typedef struct 
 {
@@ -56,8 +56,8 @@ ftglesGlueArrays_t ftglesGlueArrays;
 GLenum ftglesCurrentPrimitive = GL_TRIANGLES;
 bool ftglesQuadIndicesInitted = false;
 
-float ftgles2_foreground_color[4];	
-float ftgles2_background_color[4];	
+GLfloat ftgles2_foreground_color[4];	
+GLfloat ftgles2_background_color[4];	
 
 static void init_if_first_time(void) {
 	if (!ftglesQuadIndicesInitted)
@@ -100,20 +100,21 @@ static void init_if_first_time(void) {
 }
 
 
-float *ftgles2DirectAccessToFakeCurrentColor(void) {
+GLfloat * ftgles2DirectAccessToFakeCurrentColor(void) {
 init_if_first_time();
-return ftgles2_background_color;
+return &(ftgles2_foreground_color[0]);
 }	
 
 
 
-float *ftgles2DirectAccessToFakeRasterColor(void) {
+GLfloat * ftgles2DirectAccessToFakeRasterColor(void) {
 init_if_first_time();
-return ftgles2_background_color;
+return &(ftgles2_background_color[0]);
 }	
 
 GLvoid ftglBegin(GLenum prim) 
 {
+        ftglError("xqwwdd0");
 	init_if_first_time();
 	
     
@@ -127,10 +128,10 @@ GLvoid ftglBegin(GLenum prim)
 
 	
 			
-        GLint positionLocation = glGetAttribLocation(currentProgram, "ft_position");
+/*        GLint positionLocation = glGetAttribLocation(currentProgram, "ft_position");
         GLint colorLocation =    glGetAttribLocation(currentProgram, "ft_colorx");
         ftglError("u1");
-	
+*/	
 	
 // 	glEnableVertexAttribArray(positionLocation);
 //        ftglError("v1");
@@ -241,7 +242,7 @@ GLvoid ftglEnd()
     {
         return;
     }
-    
+    /*
     GLint texCoordLocation = glGetAttribLocation(currentProgram, "ft_texCoord");
     ftglError("x1a");
     GLint positionLocation = glGetAttribLocation(currentProgram, "ft_position");
@@ -249,6 +250,12 @@ GLvoid ftglEnd()
     GLint colorLocation =    glGetAttribLocation(currentProgram, "ft_color");
     ftglError("x1c");
 //    colorLocation=1;
+*/
+
+
+    GLint texCoordLocation = ATTRIB_TEXCOORD;
+    GLint positionLocation = ATTRIB_VERTEX;
+    GLint colorLocation =    ATTRIB_COLOR;
     
 	if (ftglesGlueArrays.currIndex == 0) 
 	{
@@ -257,15 +264,12 @@ GLvoid ftglEnd()
 	}
     ftglError("x2");
     
-fprintf(stderr,"positionlocation %d\n",positionLocation);	
     glVertexAttribPointer(positionLocation, 3, GL_FLOAT, 0, 
       sizeof(ftglesVertex_t), &(ftglesGlueArrays.vertices[0].xyz));
     ftglError("x2a");
-fprintf(stderr,"colorLocation %d\n",colorLocation);	
     glVertexAttribPointer(colorLocation, 4, GL_UNSIGNED_BYTE, 0, 
       sizeof(ftglesVertex_t), &(ftglesGlueArrays.vertices[0].rgba));
     ftglError("x2b");
-fprintf(stderr,"texCoordLocation %d\n",texCoordLocation);	
     glVertexAttribPointer(texCoordLocation, 2, GL_FLOAT, 0, 
         sizeof(ftglesVertex_t), &(ftglesGlueArrays.vertices[0].st)); 
     ftglError("x2c");
@@ -278,7 +282,8 @@ fprintf(stderr,"texCoordLocation %d\n",texCoordLocation);
     
 	if (ftglesCurrentPrimitive == GL_QUADS) 
 	{
-		glDrawElements(GL_TRIANGLES, ftglesGlueArrays.currIndex / 4 * 6, GL_UNSIGNED_SHORT, ftglesGlueArrays.quadIndices);
+		glDrawElements(GL_TRIANGLES, ftglesGlueArrays.currIndex / 4 * 6, GL_UNSIGNED_SHORT
+		, ftglesGlueArrays.quadIndices);
 	} 
 	else 
 	{
@@ -331,19 +336,19 @@ GLvoid ftglError(const char *source)
 		case GL_NO_ERROR:
 			break;
 		case GL_INVALID_ENUM:
-			printf("GL Error (%x): GL_INVALID_ENUM. %s\n\n", error, source);
+			fprintf(stderr,"GL Error (%x): GL_INVALID_ENUM. %s\n\n", error, source);
 			break;
 		case GL_INVALID_VALUE:
-			printf("GL Error (%x): GL_INVALID_VALUE. %s\n\n", error, source);
+			fprintf(stderr,"GL Error (%x): GL_INVALID_VALUE. %s\n\n", error, source);
 			break;
 		case GL_INVALID_OPERATION:
-			printf("GL Error (%x): GL_INVALID_OPERATION. %s\n\n", error, source);
+			fprintf(stderr,"GL Error (%x): GL_INVALID_OPERATION. %s\n\n", error, source);
 			break;
 		case GL_OUT_OF_MEMORY:
-			printf("GL Error (%x): GL_OUT_OF_MEMORY. %s\n\n", error, source);
+			fprintf(stderr,"GL Error (%x): GL_OUT_OF_MEMORY. %s\n\n", error, source);
 			break;
 		default:
-			printf("GL Error (%x): %s\n\n", error, source);
+			fprintf(stderr,"GL Error (%x): %s\n\n", error, source);
 			break;
 	}
 }

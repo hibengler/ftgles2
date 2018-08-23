@@ -95,7 +95,7 @@ inline FTPoint FTPixmapFontImpl::RenderI(const T* string, const int len,
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    glDisable(GL_TEXTURE_2D);
+//    glDisable(GL_TEXTURE_2D);
 
     GLfloat ftglColour[4];
 

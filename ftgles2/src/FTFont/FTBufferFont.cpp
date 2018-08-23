@@ -237,7 +237,7 @@ inline FTPoint FTBufferFontImpl::RenderI(const T* string, const int len,
    // glPushClientAttrib(GL_CLIENT_PIXEL_STORE_BIT);
 
     glEnable(GL_BLEND);
-    glEnable(GL_TEXTURE_2D);
+//    glEnable(GL_TEXTURE_2D);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // GL_ONE
 
     // Search whether the string is already in a texture we uploaded

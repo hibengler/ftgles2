@@ -143,7 +143,8 @@ void FTPolygonGlyphImpl::DoRender(const FTPoint& pen)
 	GLfloat *colors;
 	colors = ftgles2DirectAccessToFakeCurrentColor();
         ftglBindTexture(0);
-		
+	    ftglError("pf1");
+	    	
         ftglBegin(polygonType);
 		ftglColor4f(colors[0], colors[1], colors[2], colors[3]);
 		for(unsigned int i = 0; i < subMesh->PointCount(); ++i)
@@ -152,7 +153,9 @@ void FTPolygonGlyphImpl::DoRender(const FTPoint& pen)
 			ftglTexCoord2f(point.Xf() / hscale, point.Yf() / vscale);
 			ftglVertex3f(pen.Xf() + point.Xf() / 64.0f, pen.Yf() + point.Yf() / 64.0f, 0.0f);
 		}
+	    ftglError("pf2");
         ftglEnd();
+	    ftglError("pf3");
     }
 #else
     ftglBegin(GL_TRIANGLE_STRIP);

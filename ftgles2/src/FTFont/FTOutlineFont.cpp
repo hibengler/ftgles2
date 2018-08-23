@@ -117,7 +117,7 @@ void FTOutlineFontImpl::PreRender()
 {
 	preRendered = true;
 	GLfloat colors[4];
-    glDisable(GL_TEXTURE_2D);
+//    glDisable(GL_TEXTURE_2D);
     
 #ifndef FTGLES2
     glEnable(GL_LINE_SMOOTH);
