@@ -65,6 +65,7 @@ gluOrtho2D(GLdouble left, GLdouble right, GLdouble bottom, GLdouble top)
 
 #define __glPi 3.14159265358979323846
 
+#ifdef needfdkdffd
 void GLAPIENTRY
 gluPerspective(GLdouble fovy, GLdouble aspect, GLdouble zNear, GLdouble zFar)
 {
@@ -88,6 +89,7 @@ gluPerspective(GLdouble fovy, GLdouble aspect, GLdouble zNear, GLdouble zFar)
     m[3][3] = 0;
     glMultMatrixf(&m[0][0]);
 }
+#endif
 
 static void normalize(float v[3])
 {
@@ -348,6 +350,7 @@ gluUnProject4(GLdouble winx, GLdouble winy, GLdouble winz, GLdouble clipw,
     return(GL_TRUE);
 }
 
+#ifdef non_availabe
 void GLAPIENTRY
 gluPickMatrix(GLdouble x, GLdouble y, GLdouble deltax, GLdouble deltay,
 		  GLint viewport[4])
@@ -361,3 +364,4 @@ gluPickMatrix(GLdouble x, GLdouble y, GLdouble deltax, GLdouble deltay,
 	    (viewport[3] - 2 * (y - viewport[1])) / deltay, 0);
     glScalef(viewport[2] / deltax, viewport[3] / deltay, 1.0);
 }
+#endif
