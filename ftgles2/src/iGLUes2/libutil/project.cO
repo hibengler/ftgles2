@@ -28,12 +28,12 @@
  * Silicon Graphics, Inc.
  */
 
-#include "gluos.h"
+#include "glues2os.h"
 #include <math.h>
 #include <GLES2/gl2.h>
 #include <GLES2/gl2ext.h>
 
-#include "glu.h"
+#include "glues2.h"
 #include "gluint.h"
 
 /*

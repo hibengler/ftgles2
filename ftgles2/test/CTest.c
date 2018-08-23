@@ -1,18 +1,22 @@
 /* Small C bindings test program */
 
+/* This changed around - because GLUT is GL based - so we will try GLFW
+  and SDL 2.0 later */
+  
 #include "config.h"
 
 
 #include <GLES2/gl2.h>
 #include <GLES2/gl2ext.h>
 #include <unistd.h>
-#if defined HAVE_GL_GLUT_H
-#   include <GL/glut.h>
-#elif defined HAVE_GLUT_GLUT_H
-#   include <GLUT/glut.h>
-#else
-#   error GLUT headers not present
-#endif
+
+#define GLFW_INCLUDE_ES2
+#include <GLFW/glfw3.h>
+
+
+GLFWwindow* window;
+
+
 
 #include <FTGLES2/ftgles2.h>
 
@@ -417,14 +421,15 @@ static float MVPMatrix[16];
 
 
 static const GLchar * vertex_shader_text = 
+"precision mediump float;\n"
 "attribute vec4 ft_position;\n"
 "attribute vec4 ft_color;\n"
 "attribute vec2 ft_texCoord;\n"
 "varying vec4 ft_colorVarying;\n"
 "varying vec2 ft_texture_coordinate;\n"
-"\n"
+" \n"
 "uniform mat4 ft_camera;\n"
-"\n"
+" \n"
 "void main()\n"
 "{\n"
 "        gl_Position = (ft_camera * ft_position);\n"
@@ -436,10 +441,11 @@ static const GLchar * vertex_shader_text =
 //"precision mediump float;\n"
 
 static const GLchar*  fragment_shader_text = 
+"precision mediump float;\n"
 "varying vec4 ft_colorVarying;\n"
 "varying vec2 ft_texture_coordinate;\n"
 "uniform sampler2D ft_color_sampler;\n"
-"\n"
+" \n"
 "void main()\n"
 "{\n"
 "vec4 fc;\n"
@@ -449,26 +455,10 @@ static const GLchar*  fragment_shader_text =
 "fc.r = ft_colorVarying.r * factor;\n"
 "fc.g = ft_colorVarying.g * factor;\n"
 "fc.b = ft_colorVarying.b * factor;\n"
-"fc.a = 1.;\n"
+"fc.a = factor;\n"
 "   gl_FragColor =  fc;\n"
 "}\n";
 
-static const GLchar*  fragment_shader_textdsfdfdf = 
-"varying vec4 ft_colorVarying;\n"
-"varying vec2 ft_texture_coordinate;\n"
-"uniform sampler2D ft_color_sampler;\n"
-"\n"
-"void main()\n"
-"{\n"
-"vec4 fc;\n"
-"float factor;\n"
-"fc = texture2D(ft_color_sampler, ft_texture_coordinate);\n"
-"factor = 1. - fc.a;\n"
-"fc.r = ft_colorVarying.r * factor;\n"
-"fc.g = ft_colorVarying.g * factor;\n"
-"fc.b = ft_colorVarying.b * factor;\n"
-"   gl_FragColor =  texture2D(ft_color_sampler, ft_texture_coordinate);\n"
-"}\n";
 
 static void printGLString(const char *name, GLenum s) {
     const char *v = (const char *) glGetString(s);
@@ -495,6 +485,7 @@ void gles2_init(void) {
     GLint status;
  shaderProgram = glCreateProgram();
 checkGlError("a");
+fprintf(stderr,"program %d\n",shaderProgram);
  GLuint vertexShader = shader = glCreateShader(GL_VERTEX_SHADER);
  glShaderSource(vertexShader, 1, &vertex_shader_text, NULL);
 checkGlError("b");
@@ -503,7 +494,7 @@ checkGlError("c");
  glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &status);
 checkGlError("d");
  if (status==0) {
-  fprintf(stderr,"bad vertex shader status\n");
+  fprintf(stderr,"bad vertex shader status %d\n",status);
             GLint infoLen = 0;
             glGetShaderiv(vertexShader, GL_INFO_LOG_LENGTH, &infoLen);
             if (infoLen) {
@@ -511,7 +502,7 @@ checkGlError("d");
                 if (buf) {
                     glGetShaderInfoLog(vertexShader, infoLen, NULL, buf);
                     fprintf(stderr,"Could not compile shader %d:\n%s\n",
-                         0, buf);
+                         shader, buf);
                     free(buf);
                 }
                 glDeleteShader(vertexShader);
@@ -521,7 +512,7 @@ checkGlError("d");
  glAttachShader(shaderProgram, vertexShader);
 
 
- GLuint fragmentShader =  glCreateShader(GL_FRAGMENT_SHADER);
+ GLuint fragmentShader =  shader = glCreateShader(GL_FRAGMENT_SHADER);
 checkGlError("e");
  glShaderSource(fragmentShader, 1, &fragment_shader_text, NULL);
 checkGlError("f");
@@ -529,8 +520,8 @@ checkGlError("f");
 checkGlError("g");
  glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &status);
 checkGlError("h");
- if (status==0) {
-  fprintf(stderr,"bad fragment shader status\n");
+ if (status!= GL_TRUE) {
+  fprintf(stderr,"bad fragment shader status %d\n",status);
             GLint infoLen = 0;
             glGetShaderiv(fragmentShader, GL_INFO_LOG_LENGTH, &infoLen);
             if (infoLen) {
@@ -538,7 +529,7 @@ checkGlError("h");
                 if (buf) {
                     glGetShaderInfoLog(fragmentShader, infoLen, NULL, buf);
                     fprintf(stderr,"Could not compile shader %d:\n%s\n",
-                         0, buf);
+                         shader, buf);
                     free(buf);
                 }
                 glDeleteShader(fragmentShader);
@@ -548,16 +539,36 @@ checkGlError("h");
   }
  glAttachShader(shaderProgram, fragmentShader);
 
+checkGlError("j");
 
-
-glBindAttribLocation(shaderProgram, RENDER_ATTRIB_VERTEX, "position");
+glBindAttribLocation(shaderProgram, RENDER_ATTRIB_VERTEX, "ft_position");
 glBindAttribLocation(shaderProgram, RENDER_ATTRIB_COLOR, "ft_color");
 glBindAttribLocation(shaderProgram, 2, "ft_texCoord");
-
+checkGlError("k");
 glLinkProgram(shaderProgram);
 
-cameraUniform = glGetUniformLocation(shaderProgram, "ft_camera");
+checkGlError("l");
 
+glGetProgramiv(shaderProgram, GL_LINK_STATUS, &status);
+checkGlError("l1");
+ if (status!= GL_TRUE) {
+  fprintf(stderr,"bad program link status %d\n",status);
+            GLint infoLen = 0;
+            glGetProgramiv(shaderProgram, GL_INFO_LOG_LENGTH, &infoLen);
+            if (infoLen) {
+                char* buf = (char*) malloc(infoLen);
+                if (buf) {
+                    glGetProgramInfoLog(shaderProgram, infoLen, NULL, buf);
+                    fprintf(stderr,"Could not link program %d:\n%s\n",
+                         0, buf);
+                    free(buf);
+                }
+             }
+  exit(-1);
+  }
+
+cameraUniform = glGetUniformLocation(shaderProgram, "ft_camera");
+checkGlError("m");
     glDeleteShader(vertexShader);  
     glDeleteShader(fragmentShader);
   aglOrtho(cameraMatrix, -400.f, 400.f, -400.f, 400.f, -10000.0f, 10000.0f);
@@ -572,20 +583,32 @@ int main(int argc, char *argv[])
 {
     FTGLfont *f[6];
     char *font_filename = "impact.ttf";
-    char *glutchar = NULL;
-    int glutint = 0;
     int i;
 
     if(argc == 2)
       font_filename=argv[1];
 
 
-    glutInit(&glutint, &glutchar);
-    glutInitDisplayMode(GLUT_DEPTH | GLUT_RGB | GLUT_DOUBLE | GLUT_MULTISAMPLE);
-    glutInitWindowPosition(0, 0);
-    glutInitWindowSize(400, 400);
-    glutCreateWindow("FTGL C test");
+    glfwInit();
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_OPENGL_ES_API);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
+    GLFWmonitor *primary_monitor = glfwGetPrimaryMonitor();
+//    glfwGetMonitorPhysicalSize(primary_monitor, &widthMM, &heightMM);
+      const GLFWvidmode* mode = glfwGetVideoMode(primary_monitor);
+    glfwWindowHint(GLFW_RED_BITS, mode->redBits);
+    glfwWindowHint(GLFW_GREEN_BITS, mode->greenBits);
+    glfwWindowHint(GLFW_BLUE_BITS, mode->blueBits);
+    glfwWindowHint(GLFW_REFRESH_RATE, mode->refreshRate);
+    glfwWindowHint(GLFW_AUTO_ICONIFY, GL_FALSE);
+ window = glfwCreateWindow(1920,900, 
+"Silent Radiance",glfwGetPrimaryMonitor() , NULL);
+      glfwMakeContextCurrent(window);
+    printf("GL_VERSION  : %s\n", glGetString(GL_VERSION) ); 
+    printf("GL_RENDERER : %s\n", glGetString(GL_RENDERER) );
 
+
+	
     ALLOC(ftglCreateBitmapFont, f[0], font_filename);
     ALLOC(ftglCreateBitmapFont, f[1], font_filename);
     ALLOC(ftglCreateBitmapFont, f[2], font_filename);
@@ -596,31 +619,14 @@ int main(int argc, char *argv[])
     ALLOC(ftglCreateTextureFont, f[5], font_filename);  // works
 
     gles2_init();
+   checkGlError("gles2_init\n");
 
    glClearColor(0.7f, 0.7f, 0.5f, 1.0f);
    glClear(GL_COLOR_BUFFER_BIT);
-    GLenum error = glGetError();
+   checkGlError("glClearColor\n");
 
-        switch (error) {
-                case GL_NO_ERROR:
-                        break;
-                case GL_INVALID_ENUM:
-                        fprintf(stderr,"GL Error (%x): GL_INVALID_ENUM\n\n", error);
-                        break;
-                case GL_INVALID_VALUE:
-                        fprintf(stderr,"GL Error (%x): GL_INVALID_VALUE.\n\n", error);
-                        break;
-                case GL_INVALID_OPERATION:
-                        fprintf(stderr,"GL Error (%x): GL_INVALID_OPERATION.\n\n", error);
-                        break;
-                case GL_OUT_OF_MEMORY:
-                        fprintf(stderr,"GL Error (%x): GL_OUT_OF_MEMORY.\n\n", error);
-                        break;
-                default:
-                        fprintf(stderr,"GL Error (%x):\n\n", error);
-                        break;
-        }
     glUseProgram(shaderProgram);
+   checkGlError("gluse\n");
     
     float plus80[16];
     aglMatrixTranslation(plus80,0.0f,0.f,0.f);
@@ -655,7 +661,9 @@ int main(int argc, char *argv[])
 	sprintf(buf+k+k+k,"%d\n",i);
         ftglRenderFont(f[i],buf, FTGL_RENDER_ALL);
         }	
-   glutSwapBuffers();
+
+glfwSwapBuffers(window);
+checkGlError("swapbuffers\n");
 
 sleep(3);
     for(i = 0; i < 6; i++)

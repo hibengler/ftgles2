@@ -28,56 +28,61 @@
  * Silicon Graphics, Inc.
  */
 
-#include "gluos.h"
-#include "gluint.h"
-#include "glu.h"
+#include "glues2os.h"
+#include "glues2.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
+static const GLubyte versionString[] = "1.3";
+static const GLubyte extensionString[] = "";
 
-struct token_string
+const GLubyte * GLAPIENTRY
+gluGetString(GLenum name)
 {
-   GLuint Token;
-   const char *String;
-};
 
-static const struct token_string Errors[] = {
-   { GL_NO_ERROR, "no error" },
-   { GL_INVALID_ENUM, "invalid enumerant" },
-   { GL_INVALID_VALUE, "invalid value" },
-   { GL_INVALID_OPERATION, "invalid operation" },
-   { GL_OUT_OF_MEMORY, "out of memory" },
-   /*{ GL_TABLE_TOO_LARGE, "table too large" },*/
-#ifdef GL_EXT_framebuffer_object
-   { GL_INVALID_FRAMEBUFFER_OPERATION_EXT, "invalid framebuffer operation" },
-#endif
-   /* GLU */
-   { GLU_INVALID_ENUM, "invalid enumerant" },
-   { GLU_INVALID_VALUE, "invalid value" },
-   { GLU_OUT_OF_MEMORY, "out of memory" },
-   { GLU_INCOMPATIBLE_GL_VERSION, "incompatible gl version" },
-   { GLU_INVALID_OPERATION, "invalid operation" },
-   { ~0, NULL } /* end of list indicator */
-};
-
-
-
-const GLubyte* GLAPIENTRY
-gluErrorString(GLenum errorCode)
-{
-    int i;
-    for (i = 0; Errors[i].String; i++) {
-        if (Errors[i].Token == errorCode)
-            return (const GLubyte *) Errors[i].String;
+    if (name == GLU_VERSION) {
+	return versionString;
+    } else if (name == GLU_EXTENSIONS) {
+	return extensionString;
     }
-    /*
-    if ((errorCode >= GLU_NURBS_ERROR1) && (errorCode <= GLU_NURBS_ERROR37)) {
-	return (const GLubyte *) __gluNURBSErrorString(errorCode - (GLU_NURBS_ERROR1 - 1));
-    }
-    */
-    if ((errorCode >= GLU_TESS_ERROR1) && (errorCode <= GLU_TESS_ERROR6)) {
-	return (const GLubyte *) __gluTessErrorString(errorCode - (GLU_TESS_ERROR1 - 1));
-    }
-    return (const GLubyte *) 0;
+    return NULL;
 }
 
+/* extName is an extension name.
+ * extString is a string of extensions separated by blank(s). There may or 
+ * may not be leading or trailing blank(s) in extString.
+ * This works in cases of extensions being prefixes of another like
+ * GL_EXT_texture and GL_EXT_texture3D.
+ * Returns GL_TRUE if extName is found otherwise it returns GL_FALSE.
+ */
+GLboolean GLAPIENTRY
+gluCheckExtension(const GLubyte *extName, const GLubyte *extString)
+{
+  GLboolean flag = GL_FALSE;
+  char *word;
+  char *lookHere;
+  char *deleteThis;
+
+  if (extString == NULL) return GL_FALSE;
+
+  deleteThis = lookHere = (char *)malloc(strlen((const char *)extString)+1); 
+  if (lookHere == NULL)
+     return GL_FALSE;
+  /* strtok() will modify string, so copy it somewhere */
+  strcpy(lookHere,(const char *)extString);
+
+  while ((word= strtok(lookHere," ")) != NULL) {
+     if (strcmp(word,(const char *)extName) == 0) {
+        flag = GL_TRUE;
+	break;
+     }  
+     lookHere = NULL;		/* get next token */
+  }
+  free((void *)deleteThis);
+  return flag;
+} /* gluCheckExtension() */
+
+
+
+/*** registry.c ***/

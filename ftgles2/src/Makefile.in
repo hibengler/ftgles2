@@ -137,20 +137,20 @@ am__DEPENDENCIES_1 =
 libftgles2_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
 am__dirstamp = $(am__leading_dot)dirstamp
 am__objects_1 =
-am__objects_2 = iGLU-1.0.0/libutil/libftgles2_la-error.lo \
-	iGLU-1.0.0/libutil/libftgles2_la-glue.lo \
-	iGLU-1.0.0/libutil/libftgles2_la-project.lo \
-	iGLU-1.0.0/libutil/libftgles2_la-registry.lo \
-	iGLU-1.0.0/libtess/libftgles2_la-dict.lo \
-	iGLU-1.0.0/libtess/libftgles2_la-geom.lo \
-	iGLU-1.0.0/libtess/libftgles2_la-memalloc.lo \
-	iGLU-1.0.0/libtess/libftgles2_la-mesh.lo \
-	iGLU-1.0.0/libtess/libftgles2_la-normal.lo \
-	iGLU-1.0.0/libtess/libftgles2_la-priorityq.lo \
-	iGLU-1.0.0/libtess/libftgles2_la-render.lo \
-	iGLU-1.0.0/libtess/libftgles2_la-sweep.lo \
-	iGLU-1.0.0/libtess/libftgles2_la-tess.lo \
-	iGLU-1.0.0/libtess/libftgles2_la-tessmono.lo $(am__objects_1)
+am__objects_2 = iGLUes2/libutil/libftgles2_la-error.lo \
+	iGLUes2/libutil/libftgles2_la-glue.lo \
+	iGLUes2/libutil/libftgles2_la-project.lo \
+	iGLUes2/libutil/libftgles2_la-registry.lo \
+	iGLUes2/libtess/libftgles2_la-dict.lo \
+	iGLUes2/libtess/libftgles2_la-geom.lo \
+	iGLUes2/libtess/libftgles2_la-memalloc.lo \
+	iGLUes2/libtess/libftgles2_la-mesh.lo \
+	iGLUes2/libtess/libftgles2_la-normal.lo \
+	iGLUes2/libtess/libftgles2_la-priorityq.lo \
+	iGLUes2/libtess/libftgles2_la-render.lo \
+	iGLUes2/libtess/libftgles2_la-sweep.lo \
+	iGLUes2/libtess/libftgles2_la-tess.lo \
+	iGLUes2/libtess/libftgles2_la-tessmono.lo $(am__objects_1)
 am__objects_3 = FTGlyph/libftgles2_la-FTGlyph.lo \
 	FTGlyph/libftgles2_la-FTGlyphGlue.lo \
 	FTGlyph/libftgles2_la-FTBitmapGlyph.lo \
@@ -522,33 +522,33 @@ ftlayout_sources = \
     $(NULL)
 
 iglu_sources = \
-    iGLU-1.0.0/include/glu.h           \
-    iGLU-1.0.0/include/gluos.h         \
-    iGLU-1.0.0/libutil/error.c         \
-    iGLU-1.0.0/libutil/glue.c          \
-    iGLU-1.0.0/libutil/gluint.h        \
-    iGLU-1.0.0/libutil/project.c       \
-    iGLU-1.0.0/libutil/registry.c      \
-    iGLU-1.0.0/libtess/dict.c          \
-    iGLU-1.0.0/libtess/dict.h          \
-    iGLU-1.0.0/libtess/geom.c          \
-    iGLU-1.0.0/libtess/geom.h          \
-    iGLU-1.0.0/libtess/memalloc.c      \
-    iGLU-1.0.0/libtess/memalloc.h      \
-    iGLU-1.0.0/libtess/mesh.c          \
-    iGLU-1.0.0/libtess/mesh.h          \
-    iGLU-1.0.0/libtess/normal.c        \
-    iGLU-1.0.0/libtess/normal.h        \
-    iGLU-1.0.0/libtess/priorityq.c     \
-    iGLU-1.0.0/libtess/priorityq.h     \
-    iGLU-1.0.0/libtess/render.c        \
-    iGLU-1.0.0/libtess/render.h        \
-    iGLU-1.0.0/libtess/sweep.c         \
-    iGLU-1.0.0/libtess/sweep.h         \
-    iGLU-1.0.0/libtess/tess.c          \
-    iGLU-1.0.0/libtess/tess.h          \
-    iGLU-1.0.0/libtess/tessmono.c      \
-    iGLU-1.0.0/libtess/tessmono.h      \
+    iGLUes2/include/glues2.h           \
+    iGLUes2/include/glues2os.h         \
+    iGLUes2/libutil/error.c         \
+    iGLUes2/libutil/glue.c          \
+    iGLUes2/libutil/glues2int.h        \
+    iGLUes2/libutil/project.c       \
+    iGLUes2/libutil/registry.c      \
+    iGLUes2/libtess/dict.c          \
+    iGLUes2/libtess/dict.h          \
+    iGLUes2/libtess/geom.c          \
+    iGLUes2/libtess/geom.h          \
+    iGLUes2/libtess/memalloc.c      \
+    iGLUes2/libtess/memalloc.h      \
+    iGLUes2/libtess/mesh.c          \
+    iGLUes2/libtess/mesh.h          \
+    iGLUes2/libtess/normal.c        \
+    iGLUes2/libtess/normal.h        \
+    iGLUes2/libtess/priorityq.c     \
+    iGLUes2/libtess/priorityq.h     \
+    iGLUes2/libtess/render.c        \
+    iGLUes2/libtess/render.h        \
+    iGLUes2/libtess/sweep.c         \
+    iGLUes2/libtess/sweep.h         \
+    iGLUes2/libtess/tess.c          \
+    iGLUes2/libtess/tess.h          \
+    iGLUes2/libtess/tessmono.c      \
+    iGLUes2/libtess/tessmono.h      \
     $(NULL)
 
 NULL = 
@@ -620,60 +620,60 @@ clean-libLTLIBRARIES:
 	  echo rm -f $${locs}; \
 	  rm -f $${locs}; \
 	}
-iGLU-1.0.0/libutil/$(am__dirstamp):
-	@$(MKDIR_P) iGLU-1.0.0/libutil
-	@: > iGLU-1.0.0/libutil/$(am__dirstamp)
-iGLU-1.0.0/libutil/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) iGLU-1.0.0/libutil/$(DEPDIR)
-	@: > iGLU-1.0.0/libutil/$(DEPDIR)/$(am__dirstamp)
-iGLU-1.0.0/libutil/libftgles2_la-error.lo:  \
-	iGLU-1.0.0/libutil/$(am__dirstamp) \
-	iGLU-1.0.0/libutil/$(DEPDIR)/$(am__dirstamp)
-iGLU-1.0.0/libutil/libftgles2_la-glue.lo:  \
-	iGLU-1.0.0/libutil/$(am__dirstamp) \
-	iGLU-1.0.0/libutil/$(DEPDIR)/$(am__dirstamp)
-iGLU-1.0.0/libutil/libftgles2_la-project.lo:  \
-	iGLU-1.0.0/libutil/$(am__dirstamp) \
-	iGLU-1.0.0/libutil/$(DEPDIR)/$(am__dirstamp)
-iGLU-1.0.0/libutil/libftgles2_la-registry.lo:  \
-	iGLU-1.0.0/libutil/$(am__dirstamp) \
-	iGLU-1.0.0/libutil/$(DEPDIR)/$(am__dirstamp)
-iGLU-1.0.0/libtess/$(am__dirstamp):
-	@$(MKDIR_P) iGLU-1.0.0/libtess
-	@: > iGLU-1.0.0/libtess/$(am__dirstamp)
-iGLU-1.0.0/libtess/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) iGLU-1.0.0/libtess/$(DEPDIR)
-	@: > iGLU-1.0.0/libtess/$(DEPDIR)/$(am__dirstamp)
-iGLU-1.0.0/libtess/libftgles2_la-dict.lo:  \
-	iGLU-1.0.0/libtess/$(am__dirstamp) \
-	iGLU-1.0.0/libtess/$(DEPDIR)/$(am__dirstamp)
-iGLU-1.0.0/libtess/libftgles2_la-geom.lo:  \
-	iGLU-1.0.0/libtess/$(am__dirstamp) \
-	iGLU-1.0.0/libtess/$(DEPDIR)/$(am__dirstamp)
-iGLU-1.0.0/libtess/libftgles2_la-memalloc.lo:  \
-	iGLU-1.0.0/libtess/$(am__dirstamp) \
-	iGLU-1.0.0/libtess/$(DEPDIR)/$(am__dirstamp)
-iGLU-1.0.0/libtess/libftgles2_la-mesh.lo:  \
-	iGLU-1.0.0/libtess/$(am__dirstamp) \
-	iGLU-1.0.0/libtess/$(DEPDIR)/$(am__dirstamp)
-iGLU-1.0.0/libtess/libftgles2_la-normal.lo:  \
-	iGLU-1.0.0/libtess/$(am__dirstamp) \
-	iGLU-1.0.0/libtess/$(DEPDIR)/$(am__dirstamp)
-iGLU-1.0.0/libtess/libftgles2_la-priorityq.lo:  \
-	iGLU-1.0.0/libtess/$(am__dirstamp) \
-	iGLU-1.0.0/libtess/$(DEPDIR)/$(am__dirstamp)
-iGLU-1.0.0/libtess/libftgles2_la-render.lo:  \
-	iGLU-1.0.0/libtess/$(am__dirstamp) \
-	iGLU-1.0.0/libtess/$(DEPDIR)/$(am__dirstamp)
-iGLU-1.0.0/libtess/libftgles2_la-sweep.lo:  \
-	iGLU-1.0.0/libtess/$(am__dirstamp) \
-	iGLU-1.0.0/libtess/$(DEPDIR)/$(am__dirstamp)
-iGLU-1.0.0/libtess/libftgles2_la-tess.lo:  \
-	iGLU-1.0.0/libtess/$(am__dirstamp) \
-	iGLU-1.0.0/libtess/$(DEPDIR)/$(am__dirstamp)
-iGLU-1.0.0/libtess/libftgles2_la-tessmono.lo:  \
-	iGLU-1.0.0/libtess/$(am__dirstamp) \
-	iGLU-1.0.0/libtess/$(DEPDIR)/$(am__dirstamp)
+iGLUes2/libutil/$(am__dirstamp):
+	@$(MKDIR_P) iGLUes2/libutil
+	@: > iGLUes2/libutil/$(am__dirstamp)
+iGLUes2/libutil/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) iGLUes2/libutil/$(DEPDIR)
+	@: > iGLUes2/libutil/$(DEPDIR)/$(am__dirstamp)
+iGLUes2/libutil/libftgles2_la-error.lo:  \
+	iGLUes2/libutil/$(am__dirstamp) \
+	iGLUes2/libutil/$(DEPDIR)/$(am__dirstamp)
+iGLUes2/libutil/libftgles2_la-glue.lo:  \
+	iGLUes2/libutil/$(am__dirstamp) \
+	iGLUes2/libutil/$(DEPDIR)/$(am__dirstamp)
+iGLUes2/libutil/libftgles2_la-project.lo:  \
+	iGLUes2/libutil/$(am__dirstamp) \
+	iGLUes2/libutil/$(DEPDIR)/$(am__dirstamp)
+iGLUes2/libutil/libftgles2_la-registry.lo:  \
+	iGLUes2/libutil/$(am__dirstamp) \
+	iGLUes2/libutil/$(DEPDIR)/$(am__dirstamp)
+iGLUes2/libtess/$(am__dirstamp):
+	@$(MKDIR_P) iGLUes2/libtess
+	@: > iGLUes2/libtess/$(am__dirstamp)
+iGLUes2/libtess/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) iGLUes2/libtess/$(DEPDIR)
+	@: > iGLUes2/libtess/$(DEPDIR)/$(am__dirstamp)
+iGLUes2/libtess/libftgles2_la-dict.lo:  \
+	iGLUes2/libtess/$(am__dirstamp) \
+	iGLUes2/libtess/$(DEPDIR)/$(am__dirstamp)
+iGLUes2/libtess/libftgles2_la-geom.lo:  \
+	iGLUes2/libtess/$(am__dirstamp) \
+	iGLUes2/libtess/$(DEPDIR)/$(am__dirstamp)
+iGLUes2/libtess/libftgles2_la-memalloc.lo:  \
+	iGLUes2/libtess/$(am__dirstamp) \
+	iGLUes2/libtess/$(DEPDIR)/$(am__dirstamp)
+iGLUes2/libtess/libftgles2_la-mesh.lo:  \
+	iGLUes2/libtess/$(am__dirstamp) \
+	iGLUes2/libtess/$(DEPDIR)/$(am__dirstamp)
+iGLUes2/libtess/libftgles2_la-normal.lo:  \
+	iGLUes2/libtess/$(am__dirstamp) \
+	iGLUes2/libtess/$(DEPDIR)/$(am__dirstamp)
+iGLUes2/libtess/libftgles2_la-priorityq.lo:  \
+	iGLUes2/libtess/$(am__dirstamp) \
+	iGLUes2/libtess/$(DEPDIR)/$(am__dirstamp)
+iGLUes2/libtess/libftgles2_la-render.lo:  \
+	iGLUes2/libtess/$(am__dirstamp) \
+	iGLUes2/libtess/$(DEPDIR)/$(am__dirstamp)
+iGLUes2/libtess/libftgles2_la-sweep.lo:  \
+	iGLUes2/libtess/$(am__dirstamp) \
+	iGLUes2/libtess/$(DEPDIR)/$(am__dirstamp)
+iGLUes2/libtess/libftgles2_la-tess.lo:  \
+	iGLUes2/libtess/$(am__dirstamp) \
+	iGLUes2/libtess/$(DEPDIR)/$(am__dirstamp)
+iGLUes2/libtess/libftgles2_la-tessmono.lo:  \
+	iGLUes2/libtess/$(am__dirstamp) \
+	iGLUes2/libtess/$(DEPDIR)/$(am__dirstamp)
 FTGlyph/$(am__dirstamp):
 	@$(MKDIR_P) FTGlyph
 	@: > FTGlyph/$(am__dirstamp)
@@ -752,10 +752,10 @@ mostlyclean-compile:
 	-rm -f FTGlyph/*.lo
 	-rm -f FTLayout/*.$(OBJEXT)
 	-rm -f FTLayout/*.lo
-	-rm -f iGLU-1.0.0/libtess/*.$(OBJEXT)
-	-rm -f iGLU-1.0.0/libtess/*.lo
-	-rm -f iGLU-1.0.0/libutil/*.$(OBJEXT)
-	-rm -f iGLU-1.0.0/libutil/*.lo
+	-rm -f iGLUes2/libtess/*.$(OBJEXT)
+	-rm -f iGLUes2/libtess/*.lo
+	-rm -f iGLUes2/libutil/*.$(OBJEXT)
+	-rm -f iGLUes2/libutil/*.lo
 
 distclean-compile:
 	-rm -f *.tab.c
@@ -789,20 +789,20 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@FTLayout/$(DEPDIR)/libftgles2_la-FTLayout.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@FTLayout/$(DEPDIR)/libftgles2_la-FTLayoutGlue.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@FTLayout/$(DEPDIR)/libftgles2_la-FTSimpleLayout.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-dict.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-geom.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-memalloc.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-mesh.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-normal.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-priorityq.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-render.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-sweep.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-tess.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-tessmono.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@iGLU-1.0.0/libutil/$(DEPDIR)/libftgles2_la-error.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@iGLU-1.0.0/libutil/$(DEPDIR)/libftgles2_la-glue.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@iGLU-1.0.0/libutil/$(DEPDIR)/libftgles2_la-project.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@iGLU-1.0.0/libutil/$(DEPDIR)/libftgles2_la-registry.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@iGLUes2/libtess/$(DEPDIR)/libftgles2_la-dict.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@iGLUes2/libtess/$(DEPDIR)/libftgles2_la-geom.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@iGLUes2/libtess/$(DEPDIR)/libftgles2_la-memalloc.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@iGLUes2/libtess/$(DEPDIR)/libftgles2_la-mesh.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@iGLUes2/libtess/$(DEPDIR)/libftgles2_la-normal.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@iGLUes2/libtess/$(DEPDIR)/libftgles2_la-priorityq.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@iGLUes2/libtess/$(DEPDIR)/libftgles2_la-render.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@iGLUes2/libtess/$(DEPDIR)/libftgles2_la-sweep.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@iGLUes2/libtess/$(DEPDIR)/libftgles2_la-tess.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@iGLUes2/libtess/$(DEPDIR)/libftgles2_la-tessmono.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@iGLUes2/libutil/$(DEPDIR)/libftgles2_la-error.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@iGLUes2/libutil/$(DEPDIR)/libftgles2_la-glue.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@iGLUes2/libutil/$(DEPDIR)/libftgles2_la-project.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@iGLUes2/libutil/$(DEPDIR)/libftgles2_la-registry.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -828,103 +828,103 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-iGLU-1.0.0/libutil/libftgles2_la-error.lo: iGLU-1.0.0/libutil/error.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLU-1.0.0/libutil/libftgles2_la-error.lo -MD -MP -MF iGLU-1.0.0/libutil/$(DEPDIR)/libftgles2_la-error.Tpo -c -o iGLU-1.0.0/libutil/libftgles2_la-error.lo `test -f 'iGLU-1.0.0/libutil/error.c' || echo '$(srcdir)/'`iGLU-1.0.0/libutil/error.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLU-1.0.0/libutil/$(DEPDIR)/libftgles2_la-error.Tpo iGLU-1.0.0/libutil/$(DEPDIR)/libftgles2_la-error.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLU-1.0.0/libutil/error.c' object='iGLU-1.0.0/libutil/libftgles2_la-error.lo' libtool=yes @AMDEPBACKSLASH@
+iGLUes2/libutil/libftgles2_la-error.lo: iGLUes2/libutil/error.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLUes2/libutil/libftgles2_la-error.lo -MD -MP -MF iGLUes2/libutil/$(DEPDIR)/libftgles2_la-error.Tpo -c -o iGLUes2/libutil/libftgles2_la-error.lo `test -f 'iGLUes2/libutil/error.c' || echo '$(srcdir)/'`iGLUes2/libutil/error.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLUes2/libutil/$(DEPDIR)/libftgles2_la-error.Tpo iGLUes2/libutil/$(DEPDIR)/libftgles2_la-error.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLUes2/libutil/error.c' object='iGLUes2/libutil/libftgles2_la-error.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLU-1.0.0/libutil/libftgles2_la-error.lo `test -f 'iGLU-1.0.0/libutil/error.c' || echo '$(srcdir)/'`iGLU-1.0.0/libutil/error.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLUes2/libutil/libftgles2_la-error.lo `test -f 'iGLUes2/libutil/error.c' || echo '$(srcdir)/'`iGLUes2/libutil/error.c
 
-iGLU-1.0.0/libutil/libftgles2_la-glue.lo: iGLU-1.0.0/libutil/glue.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLU-1.0.0/libutil/libftgles2_la-glue.lo -MD -MP -MF iGLU-1.0.0/libutil/$(DEPDIR)/libftgles2_la-glue.Tpo -c -o iGLU-1.0.0/libutil/libftgles2_la-glue.lo `test -f 'iGLU-1.0.0/libutil/glue.c' || echo '$(srcdir)/'`iGLU-1.0.0/libutil/glue.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLU-1.0.0/libutil/$(DEPDIR)/libftgles2_la-glue.Tpo iGLU-1.0.0/libutil/$(DEPDIR)/libftgles2_la-glue.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLU-1.0.0/libutil/glue.c' object='iGLU-1.0.0/libutil/libftgles2_la-glue.lo' libtool=yes @AMDEPBACKSLASH@
+iGLUes2/libutil/libftgles2_la-glue.lo: iGLUes2/libutil/glue.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLUes2/libutil/libftgles2_la-glue.lo -MD -MP -MF iGLUes2/libutil/$(DEPDIR)/libftgles2_la-glue.Tpo -c -o iGLUes2/libutil/libftgles2_la-glue.lo `test -f 'iGLUes2/libutil/glue.c' || echo '$(srcdir)/'`iGLUes2/libutil/glue.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLUes2/libutil/$(DEPDIR)/libftgles2_la-glue.Tpo iGLUes2/libutil/$(DEPDIR)/libftgles2_la-glue.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLUes2/libutil/glue.c' object='iGLUes2/libutil/libftgles2_la-glue.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLU-1.0.0/libutil/libftgles2_la-glue.lo `test -f 'iGLU-1.0.0/libutil/glue.c' || echo '$(srcdir)/'`iGLU-1.0.0/libutil/glue.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLUes2/libutil/libftgles2_la-glue.lo `test -f 'iGLUes2/libutil/glue.c' || echo '$(srcdir)/'`iGLUes2/libutil/glue.c
 
-iGLU-1.0.0/libutil/libftgles2_la-project.lo: iGLU-1.0.0/libutil/project.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLU-1.0.0/libutil/libftgles2_la-project.lo -MD -MP -MF iGLU-1.0.0/libutil/$(DEPDIR)/libftgles2_la-project.Tpo -c -o iGLU-1.0.0/libutil/libftgles2_la-project.lo `test -f 'iGLU-1.0.0/libutil/project.c' || echo '$(srcdir)/'`iGLU-1.0.0/libutil/project.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLU-1.0.0/libutil/$(DEPDIR)/libftgles2_la-project.Tpo iGLU-1.0.0/libutil/$(DEPDIR)/libftgles2_la-project.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLU-1.0.0/libutil/project.c' object='iGLU-1.0.0/libutil/libftgles2_la-project.lo' libtool=yes @AMDEPBACKSLASH@
+iGLUes2/libutil/libftgles2_la-project.lo: iGLUes2/libutil/project.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLUes2/libutil/libftgles2_la-project.lo -MD -MP -MF iGLUes2/libutil/$(DEPDIR)/libftgles2_la-project.Tpo -c -o iGLUes2/libutil/libftgles2_la-project.lo `test -f 'iGLUes2/libutil/project.c' || echo '$(srcdir)/'`iGLUes2/libutil/project.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLUes2/libutil/$(DEPDIR)/libftgles2_la-project.Tpo iGLUes2/libutil/$(DEPDIR)/libftgles2_la-project.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLUes2/libutil/project.c' object='iGLUes2/libutil/libftgles2_la-project.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLU-1.0.0/libutil/libftgles2_la-project.lo `test -f 'iGLU-1.0.0/libutil/project.c' || echo '$(srcdir)/'`iGLU-1.0.0/libutil/project.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLUes2/libutil/libftgles2_la-project.lo `test -f 'iGLUes2/libutil/project.c' || echo '$(srcdir)/'`iGLUes2/libutil/project.c
 
-iGLU-1.0.0/libutil/libftgles2_la-registry.lo: iGLU-1.0.0/libutil/registry.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLU-1.0.0/libutil/libftgles2_la-registry.lo -MD -MP -MF iGLU-1.0.0/libutil/$(DEPDIR)/libftgles2_la-registry.Tpo -c -o iGLU-1.0.0/libutil/libftgles2_la-registry.lo `test -f 'iGLU-1.0.0/libutil/registry.c' || echo '$(srcdir)/'`iGLU-1.0.0/libutil/registry.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLU-1.0.0/libutil/$(DEPDIR)/libftgles2_la-registry.Tpo iGLU-1.0.0/libutil/$(DEPDIR)/libftgles2_la-registry.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLU-1.0.0/libutil/registry.c' object='iGLU-1.0.0/libutil/libftgles2_la-registry.lo' libtool=yes @AMDEPBACKSLASH@
+iGLUes2/libutil/libftgles2_la-registry.lo: iGLUes2/libutil/registry.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLUes2/libutil/libftgles2_la-registry.lo -MD -MP -MF iGLUes2/libutil/$(DEPDIR)/libftgles2_la-registry.Tpo -c -o iGLUes2/libutil/libftgles2_la-registry.lo `test -f 'iGLUes2/libutil/registry.c' || echo '$(srcdir)/'`iGLUes2/libutil/registry.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLUes2/libutil/$(DEPDIR)/libftgles2_la-registry.Tpo iGLUes2/libutil/$(DEPDIR)/libftgles2_la-registry.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLUes2/libutil/registry.c' object='iGLUes2/libutil/libftgles2_la-registry.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLU-1.0.0/libutil/libftgles2_la-registry.lo `test -f 'iGLU-1.0.0/libutil/registry.c' || echo '$(srcdir)/'`iGLU-1.0.0/libutil/registry.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLUes2/libutil/libftgles2_la-registry.lo `test -f 'iGLUes2/libutil/registry.c' || echo '$(srcdir)/'`iGLUes2/libutil/registry.c
 
-iGLU-1.0.0/libtess/libftgles2_la-dict.lo: iGLU-1.0.0/libtess/dict.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLU-1.0.0/libtess/libftgles2_la-dict.lo -MD -MP -MF iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-dict.Tpo -c -o iGLU-1.0.0/libtess/libftgles2_la-dict.lo `test -f 'iGLU-1.0.0/libtess/dict.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/dict.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-dict.Tpo iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-dict.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLU-1.0.0/libtess/dict.c' object='iGLU-1.0.0/libtess/libftgles2_la-dict.lo' libtool=yes @AMDEPBACKSLASH@
+iGLUes2/libtess/libftgles2_la-dict.lo: iGLUes2/libtess/dict.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLUes2/libtess/libftgles2_la-dict.lo -MD -MP -MF iGLUes2/libtess/$(DEPDIR)/libftgles2_la-dict.Tpo -c -o iGLUes2/libtess/libftgles2_la-dict.lo `test -f 'iGLUes2/libtess/dict.c' || echo '$(srcdir)/'`iGLUes2/libtess/dict.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLUes2/libtess/$(DEPDIR)/libftgles2_la-dict.Tpo iGLUes2/libtess/$(DEPDIR)/libftgles2_la-dict.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLUes2/libtess/dict.c' object='iGLUes2/libtess/libftgles2_la-dict.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLU-1.0.0/libtess/libftgles2_la-dict.lo `test -f 'iGLU-1.0.0/libtess/dict.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/dict.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLUes2/libtess/libftgles2_la-dict.lo `test -f 'iGLUes2/libtess/dict.c' || echo '$(srcdir)/'`iGLUes2/libtess/dict.c
 
-iGLU-1.0.0/libtess/libftgles2_la-geom.lo: iGLU-1.0.0/libtess/geom.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLU-1.0.0/libtess/libftgles2_la-geom.lo -MD -MP -MF iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-geom.Tpo -c -o iGLU-1.0.0/libtess/libftgles2_la-geom.lo `test -f 'iGLU-1.0.0/libtess/geom.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/geom.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-geom.Tpo iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-geom.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLU-1.0.0/libtess/geom.c' object='iGLU-1.0.0/libtess/libftgles2_la-geom.lo' libtool=yes @AMDEPBACKSLASH@
+iGLUes2/libtess/libftgles2_la-geom.lo: iGLUes2/libtess/geom.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLUes2/libtess/libftgles2_la-geom.lo -MD -MP -MF iGLUes2/libtess/$(DEPDIR)/libftgles2_la-geom.Tpo -c -o iGLUes2/libtess/libftgles2_la-geom.lo `test -f 'iGLUes2/libtess/geom.c' || echo '$(srcdir)/'`iGLUes2/libtess/geom.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLUes2/libtess/$(DEPDIR)/libftgles2_la-geom.Tpo iGLUes2/libtess/$(DEPDIR)/libftgles2_la-geom.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLUes2/libtess/geom.c' object='iGLUes2/libtess/libftgles2_la-geom.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLU-1.0.0/libtess/libftgles2_la-geom.lo `test -f 'iGLU-1.0.0/libtess/geom.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/geom.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLUes2/libtess/libftgles2_la-geom.lo `test -f 'iGLUes2/libtess/geom.c' || echo '$(srcdir)/'`iGLUes2/libtess/geom.c
 
-iGLU-1.0.0/libtess/libftgles2_la-memalloc.lo: iGLU-1.0.0/libtess/memalloc.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLU-1.0.0/libtess/libftgles2_la-memalloc.lo -MD -MP -MF iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-memalloc.Tpo -c -o iGLU-1.0.0/libtess/libftgles2_la-memalloc.lo `test -f 'iGLU-1.0.0/libtess/memalloc.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/memalloc.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-memalloc.Tpo iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-memalloc.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLU-1.0.0/libtess/memalloc.c' object='iGLU-1.0.0/libtess/libftgles2_la-memalloc.lo' libtool=yes @AMDEPBACKSLASH@
+iGLUes2/libtess/libftgles2_la-memalloc.lo: iGLUes2/libtess/memalloc.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLUes2/libtess/libftgles2_la-memalloc.lo -MD -MP -MF iGLUes2/libtess/$(DEPDIR)/libftgles2_la-memalloc.Tpo -c -o iGLUes2/libtess/libftgles2_la-memalloc.lo `test -f 'iGLUes2/libtess/memalloc.c' || echo '$(srcdir)/'`iGLUes2/libtess/memalloc.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLUes2/libtess/$(DEPDIR)/libftgles2_la-memalloc.Tpo iGLUes2/libtess/$(DEPDIR)/libftgles2_la-memalloc.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLUes2/libtess/memalloc.c' object='iGLUes2/libtess/libftgles2_la-memalloc.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLU-1.0.0/libtess/libftgles2_la-memalloc.lo `test -f 'iGLU-1.0.0/libtess/memalloc.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/memalloc.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLUes2/libtess/libftgles2_la-memalloc.lo `test -f 'iGLUes2/libtess/memalloc.c' || echo '$(srcdir)/'`iGLUes2/libtess/memalloc.c
 
-iGLU-1.0.0/libtess/libftgles2_la-mesh.lo: iGLU-1.0.0/libtess/mesh.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLU-1.0.0/libtess/libftgles2_la-mesh.lo -MD -MP -MF iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-mesh.Tpo -c -o iGLU-1.0.0/libtess/libftgles2_la-mesh.lo `test -f 'iGLU-1.0.0/libtess/mesh.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/mesh.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-mesh.Tpo iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-mesh.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLU-1.0.0/libtess/mesh.c' object='iGLU-1.0.0/libtess/libftgles2_la-mesh.lo' libtool=yes @AMDEPBACKSLASH@
+iGLUes2/libtess/libftgles2_la-mesh.lo: iGLUes2/libtess/mesh.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLUes2/libtess/libftgles2_la-mesh.lo -MD -MP -MF iGLUes2/libtess/$(DEPDIR)/libftgles2_la-mesh.Tpo -c -o iGLUes2/libtess/libftgles2_la-mesh.lo `test -f 'iGLUes2/libtess/mesh.c' || echo '$(srcdir)/'`iGLUes2/libtess/mesh.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLUes2/libtess/$(DEPDIR)/libftgles2_la-mesh.Tpo iGLUes2/libtess/$(DEPDIR)/libftgles2_la-mesh.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLUes2/libtess/mesh.c' object='iGLUes2/libtess/libftgles2_la-mesh.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLU-1.0.0/libtess/libftgles2_la-mesh.lo `test -f 'iGLU-1.0.0/libtess/mesh.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/mesh.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLUes2/libtess/libftgles2_la-mesh.lo `test -f 'iGLUes2/libtess/mesh.c' || echo '$(srcdir)/'`iGLUes2/libtess/mesh.c
 
-iGLU-1.0.0/libtess/libftgles2_la-normal.lo: iGLU-1.0.0/libtess/normal.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLU-1.0.0/libtess/libftgles2_la-normal.lo -MD -MP -MF iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-normal.Tpo -c -o iGLU-1.0.0/libtess/libftgles2_la-normal.lo `test -f 'iGLU-1.0.0/libtess/normal.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/normal.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-normal.Tpo iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-normal.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLU-1.0.0/libtess/normal.c' object='iGLU-1.0.0/libtess/libftgles2_la-normal.lo' libtool=yes @AMDEPBACKSLASH@
+iGLUes2/libtess/libftgles2_la-normal.lo: iGLUes2/libtess/normal.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLUes2/libtess/libftgles2_la-normal.lo -MD -MP -MF iGLUes2/libtess/$(DEPDIR)/libftgles2_la-normal.Tpo -c -o iGLUes2/libtess/libftgles2_la-normal.lo `test -f 'iGLUes2/libtess/normal.c' || echo '$(srcdir)/'`iGLUes2/libtess/normal.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLUes2/libtess/$(DEPDIR)/libftgles2_la-normal.Tpo iGLUes2/libtess/$(DEPDIR)/libftgles2_la-normal.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLUes2/libtess/normal.c' object='iGLUes2/libtess/libftgles2_la-normal.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLU-1.0.0/libtess/libftgles2_la-normal.lo `test -f 'iGLU-1.0.0/libtess/normal.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/normal.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLUes2/libtess/libftgles2_la-normal.lo `test -f 'iGLUes2/libtess/normal.c' || echo '$(srcdir)/'`iGLUes2/libtess/normal.c
 
-iGLU-1.0.0/libtess/libftgles2_la-priorityq.lo: iGLU-1.0.0/libtess/priorityq.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLU-1.0.0/libtess/libftgles2_la-priorityq.lo -MD -MP -MF iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-priorityq.Tpo -c -o iGLU-1.0.0/libtess/libftgles2_la-priorityq.lo `test -f 'iGLU-1.0.0/libtess/priorityq.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/priorityq.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-priorityq.Tpo iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-priorityq.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLU-1.0.0/libtess/priorityq.c' object='iGLU-1.0.0/libtess/libftgles2_la-priorityq.lo' libtool=yes @AMDEPBACKSLASH@
+iGLUes2/libtess/libftgles2_la-priorityq.lo: iGLUes2/libtess/priorityq.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLUes2/libtess/libftgles2_la-priorityq.lo -MD -MP -MF iGLUes2/libtess/$(DEPDIR)/libftgles2_la-priorityq.Tpo -c -o iGLUes2/libtess/libftgles2_la-priorityq.lo `test -f 'iGLUes2/libtess/priorityq.c' || echo '$(srcdir)/'`iGLUes2/libtess/priorityq.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLUes2/libtess/$(DEPDIR)/libftgles2_la-priorityq.Tpo iGLUes2/libtess/$(DEPDIR)/libftgles2_la-priorityq.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLUes2/libtess/priorityq.c' object='iGLUes2/libtess/libftgles2_la-priorityq.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLU-1.0.0/libtess/libftgles2_la-priorityq.lo `test -f 'iGLU-1.0.0/libtess/priorityq.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/priorityq.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLUes2/libtess/libftgles2_la-priorityq.lo `test -f 'iGLUes2/libtess/priorityq.c' || echo '$(srcdir)/'`iGLUes2/libtess/priorityq.c
 
-iGLU-1.0.0/libtess/libftgles2_la-render.lo: iGLU-1.0.0/libtess/render.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLU-1.0.0/libtess/libftgles2_la-render.lo -MD -MP -MF iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-render.Tpo -c -o iGLU-1.0.0/libtess/libftgles2_la-render.lo `test -f 'iGLU-1.0.0/libtess/render.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/render.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-render.Tpo iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-render.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLU-1.0.0/libtess/render.c' object='iGLU-1.0.0/libtess/libftgles2_la-render.lo' libtool=yes @AMDEPBACKSLASH@
+iGLUes2/libtess/libftgles2_la-render.lo: iGLUes2/libtess/render.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLUes2/libtess/libftgles2_la-render.lo -MD -MP -MF iGLUes2/libtess/$(DEPDIR)/libftgles2_la-render.Tpo -c -o iGLUes2/libtess/libftgles2_la-render.lo `test -f 'iGLUes2/libtess/render.c' || echo '$(srcdir)/'`iGLUes2/libtess/render.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLUes2/libtess/$(DEPDIR)/libftgles2_la-render.Tpo iGLUes2/libtess/$(DEPDIR)/libftgles2_la-render.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLUes2/libtess/render.c' object='iGLUes2/libtess/libftgles2_la-render.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLU-1.0.0/libtess/libftgles2_la-render.lo `test -f 'iGLU-1.0.0/libtess/render.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/render.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLUes2/libtess/libftgles2_la-render.lo `test -f 'iGLUes2/libtess/render.c' || echo '$(srcdir)/'`iGLUes2/libtess/render.c
 
-iGLU-1.0.0/libtess/libftgles2_la-sweep.lo: iGLU-1.0.0/libtess/sweep.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLU-1.0.0/libtess/libftgles2_la-sweep.lo -MD -MP -MF iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-sweep.Tpo -c -o iGLU-1.0.0/libtess/libftgles2_la-sweep.lo `test -f 'iGLU-1.0.0/libtess/sweep.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/sweep.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-sweep.Tpo iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-sweep.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLU-1.0.0/libtess/sweep.c' object='iGLU-1.0.0/libtess/libftgles2_la-sweep.lo' libtool=yes @AMDEPBACKSLASH@
+iGLUes2/libtess/libftgles2_la-sweep.lo: iGLUes2/libtess/sweep.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLUes2/libtess/libftgles2_la-sweep.lo -MD -MP -MF iGLUes2/libtess/$(DEPDIR)/libftgles2_la-sweep.Tpo -c -o iGLUes2/libtess/libftgles2_la-sweep.lo `test -f 'iGLUes2/libtess/sweep.c' || echo '$(srcdir)/'`iGLUes2/libtess/sweep.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLUes2/libtess/$(DEPDIR)/libftgles2_la-sweep.Tpo iGLUes2/libtess/$(DEPDIR)/libftgles2_la-sweep.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLUes2/libtess/sweep.c' object='iGLUes2/libtess/libftgles2_la-sweep.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLU-1.0.0/libtess/libftgles2_la-sweep.lo `test -f 'iGLU-1.0.0/libtess/sweep.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/sweep.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLUes2/libtess/libftgles2_la-sweep.lo `test -f 'iGLUes2/libtess/sweep.c' || echo '$(srcdir)/'`iGLUes2/libtess/sweep.c
 
-iGLU-1.0.0/libtess/libftgles2_la-tess.lo: iGLU-1.0.0/libtess/tess.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLU-1.0.0/libtess/libftgles2_la-tess.lo -MD -MP -MF iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-tess.Tpo -c -o iGLU-1.0.0/libtess/libftgles2_la-tess.lo `test -f 'iGLU-1.0.0/libtess/tess.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/tess.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-tess.Tpo iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-tess.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLU-1.0.0/libtess/tess.c' object='iGLU-1.0.0/libtess/libftgles2_la-tess.lo' libtool=yes @AMDEPBACKSLASH@
+iGLUes2/libtess/libftgles2_la-tess.lo: iGLUes2/libtess/tess.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLUes2/libtess/libftgles2_la-tess.lo -MD -MP -MF iGLUes2/libtess/$(DEPDIR)/libftgles2_la-tess.Tpo -c -o iGLUes2/libtess/libftgles2_la-tess.lo `test -f 'iGLUes2/libtess/tess.c' || echo '$(srcdir)/'`iGLUes2/libtess/tess.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLUes2/libtess/$(DEPDIR)/libftgles2_la-tess.Tpo iGLUes2/libtess/$(DEPDIR)/libftgles2_la-tess.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLUes2/libtess/tess.c' object='iGLUes2/libtess/libftgles2_la-tess.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLU-1.0.0/libtess/libftgles2_la-tess.lo `test -f 'iGLU-1.0.0/libtess/tess.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/tess.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLUes2/libtess/libftgles2_la-tess.lo `test -f 'iGLUes2/libtess/tess.c' || echo '$(srcdir)/'`iGLUes2/libtess/tess.c
 
-iGLU-1.0.0/libtess/libftgles2_la-tessmono.lo: iGLU-1.0.0/libtess/tessmono.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLU-1.0.0/libtess/libftgles2_la-tessmono.lo -MD -MP -MF iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-tessmono.Tpo -c -o iGLU-1.0.0/libtess/libftgles2_la-tessmono.lo `test -f 'iGLU-1.0.0/libtess/tessmono.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/tessmono.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-tessmono.Tpo iGLU-1.0.0/libtess/$(DEPDIR)/libftgles2_la-tessmono.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLU-1.0.0/libtess/tessmono.c' object='iGLU-1.0.0/libtess/libftgles2_la-tessmono.lo' libtool=yes @AMDEPBACKSLASH@
+iGLUes2/libtess/libftgles2_la-tessmono.lo: iGLUes2/libtess/tessmono.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iGLUes2/libtess/libftgles2_la-tessmono.lo -MD -MP -MF iGLUes2/libtess/$(DEPDIR)/libftgles2_la-tessmono.Tpo -c -o iGLUes2/libtess/libftgles2_la-tessmono.lo `test -f 'iGLUes2/libtess/tessmono.c' || echo '$(srcdir)/'`iGLUes2/libtess/tessmono.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) iGLUes2/libtess/$(DEPDIR)/libftgles2_la-tessmono.Tpo iGLUes2/libtess/$(DEPDIR)/libftgles2_la-tessmono.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='iGLUes2/libtess/tessmono.c' object='iGLUes2/libtess/libftgles2_la-tessmono.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLU-1.0.0/libtess/libftgles2_la-tessmono.lo `test -f 'iGLU-1.0.0/libtess/tessmono.c' || echo '$(srcdir)/'`iGLU-1.0.0/libtess/tessmono.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libftgles2_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iGLUes2/libtess/libftgles2_la-tessmono.lo `test -f 'iGLUes2/libtess/tessmono.c' || echo '$(srcdir)/'`iGLUes2/libtess/tessmono.c
 
 .cpp.o:
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -1162,8 +1162,8 @@ clean-libtool:
 	-rm -rf FTGLES2/.libs FTGLES2/_libs
 	-rm -rf FTGlyph/.libs FTGlyph/_libs
 	-rm -rf FTLayout/.libs FTLayout/_libs
-	-rm -rf iGLU-1.0.0/libtess/.libs iGLU-1.0.0/libtess/_libs
-	-rm -rf iGLU-1.0.0/libutil/.libs iGLU-1.0.0/libutil/_libs
+	-rm -rf iGLUes2/libtess/.libs iGLUes2/libtess/_libs
+	-rm -rf iGLUes2/libutil/.libs iGLUes2/libutil/_libs
 install-ftgles2HEADERS: $(ftgles2_HEADERS)
 	@$(NORMAL_INSTALL)
 	@list='$(ftgles2_HEADERS)'; test -n "$(ftgles2dir)" || list=; \
@@ -1309,10 +1309,10 @@ distclean-generic:
 	-rm -f FTGlyph/$(am__dirstamp)
 	-rm -f FTLayout/$(DEPDIR)/$(am__dirstamp)
 	-rm -f FTLayout/$(am__dirstamp)
-	-rm -f iGLU-1.0.0/libtess/$(DEPDIR)/$(am__dirstamp)
-	-rm -f iGLU-1.0.0/libtess/$(am__dirstamp)
-	-rm -f iGLU-1.0.0/libutil/$(DEPDIR)/$(am__dirstamp)
-	-rm -f iGLU-1.0.0/libutil/$(am__dirstamp)
+	-rm -f iGLUes2/libtess/$(DEPDIR)/$(am__dirstamp)
+	-rm -f iGLUes2/libtess/$(am__dirstamp)
+	-rm -f iGLUes2/libutil/$(DEPDIR)/$(am__dirstamp)
+	-rm -f iGLUes2/libutil/$(am__dirstamp)
 
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
@@ -1323,7 +1323,7 @@ clean-am: clean-generic clean-libLTLIBRARIES clean-libtool \
 	mostlyclean-am
 
 distclean: distclean-am
-	-rm -rf ./$(DEPDIR) FTFont/$(DEPDIR) FTGLES2/$(DEPDIR) FTGlyph/$(DEPDIR) FTLayout/$(DEPDIR) iGLU-1.0.0/libtess/$(DEPDIR) iGLU-1.0.0/libutil/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) FTFont/$(DEPDIR) FTGLES2/$(DEPDIR) FTGlyph/$(DEPDIR) FTLayout/$(DEPDIR) iGLUes2/libtess/$(DEPDIR) iGLUes2/libutil/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -1369,7 +1369,7 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-	-rm -rf ./$(DEPDIR) FTFont/$(DEPDIR) FTGLES2/$(DEPDIR) FTGlyph/$(DEPDIR) FTLayout/$(DEPDIR) iGLU-1.0.0/libtess/$(DEPDIR) iGLU-1.0.0/libutil/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) FTFont/$(DEPDIR) FTGLES2/$(DEPDIR) FTGlyph/$(DEPDIR) FTLayout/$(DEPDIR) iGLUes2/libtess/$(DEPDIR) iGLUes2/libutil/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 

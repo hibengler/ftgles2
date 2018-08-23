@@ -31,8 +31,7 @@
 #ifndef __glu_h__
 #define __glu_h__
 
-#include <GLES2/gl2.h>
-#include <GLES2/gl2ext.h>
+#include <OpenGLES/ES1/gl.h>
 
 #ifndef GLAPIENTRY
 #define GLAPIENTRY
@@ -150,23 +149,6 @@ typedef GLUtesselator GLUtesselatorObj;
 typedef GLUtesselator GLUtriangulatorObj;
 
 #define GLU_TESS_MAX_COORD 1.0e150
-
-
-/* vvv from https://github.com/micahpearlman/MonkVG/blob/master/glu/include/glu.h*/
-
-#ifndef GLAPIENTRY
-#define GLAPIENTRY
-#endif
-
-#ifndef GLAPIENTRYP
-#define GLAPIENTRYP GLAPIENTRY 
-#endif
-/* from ^^^ */
-
-
-
-
-
 
 /* Internal convenience typedefs */
 typedef void (GLAPIENTRYP _GLUfuncptr)();

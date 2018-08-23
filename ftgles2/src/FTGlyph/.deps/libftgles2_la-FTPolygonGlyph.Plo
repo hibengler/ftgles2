@@ -97,7 +97,7 @@ FTGlyph/libftgles2_la-FTPolygonGlyph.lo: FTGlyph/FTPolygonGlyph.cpp \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/GLES2/gl2ext.h FTGlyph/FTPolygonGlyphImpl.h \
- FTGlyph/FTGlyphImpl.h FTVectoriser.h ../src/iGLU-1.0.0/include/glu.h \
+ FTGlyph/FTGlyphImpl.h FTVectoriser.h ../src/iGLUes2/include/glues2.h \
  FTContour.h FTVector.h FTList.h
 
 /usr/include/stdc-predef.h:
@@ -356,7 +356,7 @@ FTGlyph/FTGlyphImpl.h:
 
 FTVectoriser.h:
 
-../src/iGLU-1.0.0/include/glu.h:
+../src/iGLUes2/include/glues2.h:
 
 FTContour.h:
 

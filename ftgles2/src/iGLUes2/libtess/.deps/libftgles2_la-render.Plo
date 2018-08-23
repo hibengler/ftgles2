@@ -1,12 +1,13 @@
-iGLU-1.0.0/libtess/libftgles2_la-geom.lo: iGLU-1.0.0/libtess/geom.c \
- /usr/include/stdc-predef.h ../src/iGLU-1.0.0/include/gluos.h \
+iGLUes2/libtess/libftgles2_la-render.lo: iGLUes2/libtess/render.c \
+ /usr/include/stdc-predef.h ../src/iGLUes2/include/glues2os.h \
  /usr/include/assert.h /usr/include/features.h \
  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h iGLU-1.0.0/libtess/mesh.h \
- ../src/iGLU-1.0.0/include/glu.h /usr/include/GLES2/gl2.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h iGLUes2/libtess/mesh.h \
+ ../src/iGLUes2/include/glues2.h /usr/include/GLES2/gl2.h \
  /usr/include/GLES2/gl2platform.h /usr/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -15,11 +16,16 @@ iGLU-1.0.0/libtess/libftgles2_la-geom.lo: iGLU-1.0.0/libtess/geom.c \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/include/GLES2/gl2ext.h iGLU-1.0.0/libtess/geom.h
+ /usr/include/GLES2/gl2ext.h iGLUes2/libtess/tess.h /usr/include/setjmp.h \
+ /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/setjmp2.h iGLUes2/libtess/dict.h \
+ iGLUes2/libtess/priorityq.h iGLUes2/libtess/priorityq-heap.h \
+ iGLUes2/libtess/render.h
 
 /usr/include/stdc-predef.h:
 
-../src/iGLU-1.0.0/include/gluos.h:
+../src/iGLUes2/include/glues2os.h:
 
 /usr/include/assert.h:
 
@@ -35,9 +41,11 @@ iGLU-1.0.0/libtess/libftgles2_la-geom.lo: iGLU-1.0.0/libtess/geom.c \
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-iGLU-1.0.0/libtess/mesh.h:
+/usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h:
 
-../src/iGLU-1.0.0/include/glu.h:
+iGLUes2/libtess/mesh.h:
+
+../src/iGLUes2/include/glues2.h:
 
 /usr/include/GLES2/gl2.h:
 
@@ -63,4 +71,20 @@ iGLU-1.0.0/libtess/mesh.h:
 
 /usr/include/GLES2/gl2ext.h:
 
-iGLU-1.0.0/libtess/geom.h:
+iGLUes2/libtess/tess.h:
+
+/usr/include/setjmp.h:
+
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/setjmp2.h:
+
+iGLUes2/libtess/dict.h:
+
+iGLUes2/libtess/priorityq.h:
+
+iGLUes2/libtess/priorityq-heap.h:
+
+iGLUes2/libtess/render.h:

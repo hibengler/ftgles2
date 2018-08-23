@@ -240,10 +240,10 @@ AUTOMAKE = ${SHELL} /home/hib/opencvs/SilentRadiance/linux/other/ftgles2/ftgles2
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
-CFLAGS = -DFTGLES2=1 -I/usr/include -I/usr/local/include -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs
+CFLAGS = -g -O2 -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs
 CONVERT = /usr/bin/convert
 CPP = gcc -E
-CPPFLAGS = -DFTGLES2=1 -I/usr/include  -I/usr/local/include -I${top_srcdir}/src -I${top_srcdir}/src/iGLU-1.0.0/include -Wall -Wpointer-arith -Wcast-align -Wcast-qual -Wshadow -Wsign-compare
+CPPFLAGS =  -I${top_srcdir}/src -I${top_srcdir}/src/iGLUes2/include -Wall -Wpointer-arith -Wcast-align -Wcast-qual -Wshadow -Wsign-compare
 CPPUNIT_CFLAGS = 
 CPPUNIT_LIBS = 
 CXX = g++

@@ -1,5 +1,5 @@
-iGLU-1.0.0/libutil/libftgles2_la-project.lo: iGLU-1.0.0/libutil/project.c \
- /usr/include/stdc-predef.h ../src/iGLU-1.0.0/include/gluos.h \
+iGLUes2/libutil/libftgles2_la-project.lo: iGLUes2/libutil/project.c \
+ /usr/include/stdc-predef.h ../src/iGLUes2/include/glues2os.h \
  /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -17,18 +17,19 @@ iGLU-1.0.0/libutil/libftgles2_la-project.lo: iGLU-1.0.0/libutil/project.c \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls.h /usr/include/GLES2/gl2.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/mathinline.h /usr/include/GLES2/gl2.h \
  /usr/include/GLES2/gl2platform.h /usr/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/include/GLES2/gl2ext.h ../src/iGLU-1.0.0/include/glu.h \
- iGLU-1.0.0/libutil/gluint.h
+ /usr/include/GLES2/gl2ext.h ../src/iGLUes2/include/glues2.h \
+ iGLUes2/libutil/glues2int.h
 
 /usr/include/stdc-predef.h:
 
-../src/iGLU-1.0.0/include/gluos.h:
+../src/iGLUes2/include/glues2os.h:
 
 /usr/include/math.h:
 
@@ -68,6 +69,8 @@ iGLU-1.0.0/libutil/libftgles2_la-project.lo: iGLU-1.0.0/libutil/project.c \
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
+/usr/include/x86_64-linux-gnu/bits/mathinline.h:
+
 /usr/include/GLES2/gl2.h:
 
 /usr/include/GLES2/gl2platform.h:
@@ -86,6 +89,6 @@ iGLU-1.0.0/libutil/libftgles2_la-project.lo: iGLU-1.0.0/libutil/project.c \
 
 /usr/include/GLES2/gl2ext.h:
 
-../src/iGLU-1.0.0/include/glu.h:
+../src/iGLUes2/include/glues2.h:
 
-iGLU-1.0.0/libutil/gluint.h:
+iGLUes2/libutil/glues2int.h:

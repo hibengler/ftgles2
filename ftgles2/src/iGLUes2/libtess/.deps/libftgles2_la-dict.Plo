@@ -1,7 +1,7 @@
-iGLU-1.0.0/libtess/libftgles2_la-dict.lo: iGLU-1.0.0/libtess/dict.c \
+iGLUes2/libtess/libftgles2_la-dict.lo: iGLUes2/libtess/dict.c \
  /usr/include/stdc-predef.h \
  /usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h \
- iGLU-1.0.0/libtess/dict-list.h iGLU-1.0.0/libtess/memalloc.h \
+ iGLUes2/libtess/dict-list.h iGLUes2/libtess/memalloc.h \
  /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -31,20 +31,24 @@ iGLU-1.0.0/libtess/libftgles2_la-dict.lo: iGLU-1.0.0/libtess/dict.c \
  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
- /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
 
 /usr/include/stdc-predef.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h:
 
-iGLU-1.0.0/libtess/dict-list.h:
+iGLUes2/libtess/dict-list.h:
 
-iGLU-1.0.0/libtess/memalloc.h:
+iGLUes2/libtess/memalloc.h:
 
 /usr/include/stdlib.h:
 
@@ -108,6 +112,8 @@ iGLU-1.0.0/libtess/memalloc.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
+/usr/include/x86_64-linux-gnu/bits/select2.h:
+
 /usr/include/x86_64-linux-gnu/sys/sysmacros.h:
 
 /usr/include/x86_64-linux-gnu/bits/sysmacros.h:
@@ -120,4 +126,8 @@ iGLU-1.0.0/libtess/memalloc.h:
 
 /usr/include/alloca.h:
 
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:

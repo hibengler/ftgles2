@@ -9,4 +9,4 @@ Version: 0.1
 Libs: -L${libdir} -lftgl
 Requires.private: freetype2
 Libs.private: @GL_LIBS@ -lm
-Cflags: -I${includedir} -I${includedir}/FTGL -I${includedir}/iGLU-1.0.0/include
+Cflags: -I${includedir} -I${includedir}/FTGL -I${includedir}/iGLUes2/include

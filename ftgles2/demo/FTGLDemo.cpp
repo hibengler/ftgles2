@@ -391,22 +391,22 @@ void do_display (void)
         case FTGL_BITMAP:
         case FTGL_PIXMAP:
         case FTGL_OUTLINE:
-            glDisable(GL_TEXTURE_2D);
+//            glDisable(GL_TEXTURE_2D);
             break;
         case FTGL_POLYGON:
-            glDisable(GL_TEXTURE_2D);
+//            glDisable(GL_TEXTURE_2D);
             setUpLighting();
             break;
         case FTGL_EXTRUDE:
             glEnable(GL_DEPTH_TEST);
             glDisable(GL_BLEND);
-            glEnable(GL_TEXTURE_2D);
+//            glEnable(GL_TEXTURE_2D);
             setUpLighting();
             glBindTexture(GL_TEXTURE_2D, textureID[0]);
             break;
         case FTGL_TEXTURE:
         case FTGL_BUFFER:
-            glEnable(GL_TEXTURE_2D);
+//            glEnable(GL_TEXTURE_2D);
             glDisable(GL_DEPTH_TEST);
             setUpLighting();
             glNormal3f(0.0, 0.0, 1.0);

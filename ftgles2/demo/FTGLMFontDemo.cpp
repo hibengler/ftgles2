@@ -227,7 +227,7 @@ void renderFontmetrics()
 
     // Draw the bounding box
     glDisable(GL_LIGHTING);
-    glDisable(GL_TEXTURE_2D);
+//    glDisable(GL_TEXTURE_2D);
             glEnable(GL_LINE_SMOOTH);
             glEnable(GL_BLEND);
             glBlendFunc(GL_SRC_ALPHA, GL_ONE); // GL_ONE_MINUS_SRC_ALPHA
@@ -393,7 +393,7 @@ void do_display (void)
             setUpLighting();
             break;
         case FTGL_TEXTURE:
-            glEnable(GL_TEXTURE_2D);
+//            glEnable(GL_TEXTURE_2D);
             glDisable(GL_DEPTH_TEST);
             setUpLighting();
             glNormal3f(0.0, 0.0, 1.0);

@@ -96,8 +96,7 @@ am__aclocal_m4_deps = $(top_srcdir)/m4/font.m4 \
 	$(top_srcdir)/m4/freetype2.m4 $(top_srcdir)/m4/glut.m4 \
 	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
 	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
-	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/m4/pkg.m4 \
-	$(top_srcdir)/configure.ac
+	$(top_srcdir)/m4/pkg.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(am__DIST_COMMON)
@@ -230,10 +229,10 @@ AUTOMAKE = ${SHELL} /home/hib/opencvs/SilentRadiance/linux/other/ftgles2/ftgles2
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
-CFLAGS = -DFTGLES2=1 -I/usr/include -I/usr/local/include -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs
+CFLAGS = -g -O2 -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs
 CONVERT = /usr/bin/convert
 CPP = gcc -E
-CPPFLAGS = -DFTGLES2=1 -I/usr/include  -I/usr/local/include -I${top_srcdir}/src -I${top_srcdir}/src/iGLU-1.0.0/include -Wall -Wpointer-arith -Wcast-align -Wcast-qual -Wshadow -Wsign-compare
+CPPFLAGS =  -I${top_srcdir}/src -I${top_srcdir}/src/iGLUes2/include -Wall -Wpointer-arith -Wcast-align -Wcast-qual -Wshadow -Wsign-compare
 CPPUNIT_CFLAGS = 
 CPPUNIT_LIBS = 
 CXX = g++

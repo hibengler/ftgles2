@@ -97,7 +97,7 @@ libftgles2_la-FTVectoriser.lo: FTVectoriser.cpp \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/GLES2/gl2ext.h FTVectoriser.h \
- ../src/iGLU-1.0.0/include/glu.h FTContour.h FTVector.h FTList.h
+ ../src/iGLUes2/include/glues2.h FTContour.h FTVector.h FTList.h
 
 /usr/include/stdc-predef.h:
 
@@ -349,7 +349,7 @@ FTGLES2/ftgles2Glue.h:
 
 FTVectoriser.h:
 
-../src/iGLU-1.0.0/include/glu.h:
+../src/iGLUes2/include/glues2.h:
 
 FTContour.h:
 

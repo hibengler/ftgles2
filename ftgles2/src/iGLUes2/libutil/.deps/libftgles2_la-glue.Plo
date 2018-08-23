@@ -1,6 +1,5 @@
-iGLU-1.0.0/libtess/libftgles2_la-memalloc.lo: \
- iGLU-1.0.0/libtess/memalloc.c /usr/include/stdc-predef.h \
- iGLU-1.0.0/libtess/memalloc.h /usr/include/stdlib.h \
+iGLUes2/libutil/libftgles2_la-glue.lo: iGLUes2/libutil/glue.c \
+ /usr/include/stdc-predef.h /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -30,20 +29,18 @@ iGLU-1.0.0/libtess/libftgles2_la-memalloc.lo: \
  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
- /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/string.h \
- /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/strings.h
+ /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h iGLUes2/libutil/glues2int.h
 
 /usr/include/stdc-predef.h:
-
-iGLU-1.0.0/libtess/memalloc.h:
 
 /usr/include/stdlib.h:
 
@@ -109,6 +106,8 @@ iGLU-1.0.0/libtess/memalloc.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
+/usr/include/x86_64-linux-gnu/bits/select2.h:
+
 /usr/include/x86_64-linux-gnu/sys/sysmacros.h:
 
 /usr/include/x86_64-linux-gnu/bits/sysmacros.h:
@@ -121,12 +120,10 @@ iGLU-1.0.0/libtess/memalloc.h:
 
 /usr/include/alloca.h:
 
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
-/usr/include/string.h:
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
-
-/usr/include/strings.h:
+iGLUes2/libutil/glues2int.h:

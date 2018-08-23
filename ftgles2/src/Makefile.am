@@ -110,33 +110,33 @@ ftlayout_sources = \
     $(NULL)
 
 iglu_sources = \
-    iGLU-1.0.0/include/glu.h           \
-    iGLU-1.0.0/include/gluos.h         \
-    iGLU-1.0.0/libutil/error.c         \
-    iGLU-1.0.0/libutil/glue.c          \
-    iGLU-1.0.0/libutil/gluint.h        \
-    iGLU-1.0.0/libutil/project.c       \
-    iGLU-1.0.0/libutil/registry.c      \
-    iGLU-1.0.0/libtess/dict.c          \
-    iGLU-1.0.0/libtess/dict.h          \
-    iGLU-1.0.0/libtess/geom.c          \
-    iGLU-1.0.0/libtess/geom.h          \
-    iGLU-1.0.0/libtess/memalloc.c      \
-    iGLU-1.0.0/libtess/memalloc.h      \
-    iGLU-1.0.0/libtess/mesh.c          \
-    iGLU-1.0.0/libtess/mesh.h          \
-    iGLU-1.0.0/libtess/normal.c        \
-    iGLU-1.0.0/libtess/normal.h        \
-    iGLU-1.0.0/libtess/priorityq.c     \
-    iGLU-1.0.0/libtess/priorityq.h     \
-    iGLU-1.0.0/libtess/render.c        \
-    iGLU-1.0.0/libtess/render.h        \
-    iGLU-1.0.0/libtess/sweep.c         \
-    iGLU-1.0.0/libtess/sweep.h         \
-    iGLU-1.0.0/libtess/tess.c          \
-    iGLU-1.0.0/libtess/tess.h          \
-    iGLU-1.0.0/libtess/tessmono.c      \
-    iGLU-1.0.0/libtess/tessmono.h      \
+    iGLUes2/include/glues2.h           \
+    iGLUes2/include/glues2os.h         \
+    iGLUes2/libutil/error.c         \
+    iGLUes2/libutil/glue.c          \
+    iGLUes2/libutil/glues2int.h        \
+    iGLUes2/libutil/project.c       \
+    iGLUes2/libutil/registry.c      \
+    iGLUes2/libtess/dict.c          \
+    iGLUes2/libtess/dict.h          \
+    iGLUes2/libtess/geom.c          \
+    iGLUes2/libtess/geom.h          \
+    iGLUes2/libtess/memalloc.c      \
+    iGLUes2/libtess/memalloc.h      \
+    iGLUes2/libtess/mesh.c          \
+    iGLUes2/libtess/mesh.h          \
+    iGLUes2/libtess/normal.c        \
+    iGLUes2/libtess/normal.h        \
+    iGLUes2/libtess/priorityq.c     \
+    iGLUes2/libtess/priorityq.h     \
+    iGLUes2/libtess/render.c        \
+    iGLUes2/libtess/render.h        \
+    iGLUes2/libtess/sweep.c         \
+    iGLUes2/libtess/sweep.h         \
+    iGLUes2/libtess/tess.c          \
+    iGLUes2/libtess/tess.h          \
+    iGLUes2/libtess/tessmono.c      \
+    iGLUes2/libtess/tessmono.h      \
     $(NULL)
 
 NULL =

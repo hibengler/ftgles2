@@ -65,7 +65,7 @@ AM_CONDITIONAL(HAVE_GLUT, test "x$GLUT" != "xno")
 dnl search the include directory (required for non-srcdir builds).
 dnl should come after the system services checks otherwise headers
 dnl may conflict.
-CPPFLAGS="$CPPFLAGS -I\${top_srcdir}/src -I\${top_srcdir}/src/iGLU-1.0.0/include"
+CPPFLAGS="$CPPFLAGS -I\${top_srcdir}/src -I\${top_srcdir}/src/iGLUes2/include"
 
 # Warning flags
 CPPFLAGS="${CPPFLAGS} -Wall -Wpointer-arith -Wcast-align -Wcast-qual -Wshadow -Wsign-compare"
