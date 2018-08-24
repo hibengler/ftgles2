@@ -17,8 +17,7 @@ iGLUes2/libutil/libftgles2_la-project.lo: iGLUes2/libutil/project.c \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
- /usr/include/x86_64-linux-gnu/bits/mathinline.h /usr/include/GLES2/gl2.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h /usr/include/GLES2/gl2.h \
  /usr/include/GLES2/gl2platform.h /usr/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
@@ -68,8 +67,6 @@ iGLUes2/libutil/libftgles2_la-project.lo: iGLUes2/libutil/project.c \
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathinline.h:
 
 /usr/include/GLES2/gl2.h:
 

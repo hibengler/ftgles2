@@ -18,10 +18,9 @@ iGLUes2/libtess/libftgles2_la-normal.lo: iGLUes2/libtess/normal.c \
  /usr/include/GLES2/gl2ext.h iGLUes2/libtess/tess.h /usr/include/setjmp.h \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/setjmp2.h iGLUes2/libtess/dict.h \
- iGLUes2/libtess/priorityq.h iGLUes2/libtess/priorityq-heap.h \
- iGLUes2/libtess/normal.h /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ iGLUes2/libtess/dict.h iGLUes2/libtess/priorityq.h \
+ iGLUes2/libtess/priorityq-heap.h iGLUes2/libtess/normal.h \
+ /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
@@ -29,8 +28,7 @@ iGLUes2/libtess/libftgles2_la-normal.lo: iGLUes2/libtess/normal.c \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
- /usr/include/x86_64-linux-gnu/bits/mathinline.h /usr/include/assert.h
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h /usr/include/assert.h
 
 /usr/include/stdc-predef.h:
 
@@ -84,8 +82,6 @@ iGLUes2/libtess/tess.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/setjmp2.h:
-
 iGLUes2/libtess/dict.h:
 
 iGLUes2/libtess/priorityq.h:
@@ -113,7 +109,5 @@ iGLUes2/libtess/normal.h:
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathinline.h:
 
 /usr/include/assert.h:

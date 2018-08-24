@@ -133,10 +133,10 @@ AUTOMAKE = ${SHELL} /home/hib/opencvs/SilentRadiance/linux/other/ftgles2/ftgles2
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
-CFLAGS = -g -O2 -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs
+CFLAGS = -DFTGLES2=1 -I/usr/include -I/usr/local/include -I/usr/local/include/freetype2 -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs
 CONVERT = /usr/bin/convert
 CPP = gcc -E
-CPPFLAGS =  -I${top_srcdir}/src -I${top_srcdir}/src/iGLUes2/include -Wall -Wpointer-arith -Wcast-align -Wcast-qual -Wshadow -Wsign-compare
+CPPFLAGS = -DFTGLES2=1 -I/usr/include  -I/usr/local/include -I/usr/local/include/freetype2 -I${top_srcdir}/src -I${top_srcdir}/src/iGLUes2/include -Wall -Wpointer-arith -Wcast-align -Wcast-qual -Wshadow -Wsign-compare
 CPPUNIT_CFLAGS = 
 CPPUNIT_LIBS = 
 CXX = g++
@@ -158,9 +158,9 @@ EGREP = /bin/grep -E
 EPSTOPDF = no
 EXEEXT = 
 FGREP = /bin/grep -F
-FT2_CFLAGS = -I/usr/local/include/freetype2
-FT2_CONFIG = /usr/bin/freetype-config
-FT2_LIBS = -L/usr/local/lib -lfreetype
+FT2_CFLAGS = 
+FT2_CONFIG = /usr/local/bin/freetype-config
+FT2_LIBS = 
 GLUT_CFLAGS = 
 GLUT_LIBS = -lglut
 GREP = /bin/grep

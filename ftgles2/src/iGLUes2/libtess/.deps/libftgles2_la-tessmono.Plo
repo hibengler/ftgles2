@@ -30,19 +30,15 @@ iGLUes2/libtess/libftgles2_la-tessmono.lo: iGLUes2/libtess/tessmono.c \
  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h \
  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
- /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h iGLUes2/libtess/geom.h \
- iGLUes2/libtess/mesh.h ../src/iGLUes2/include/glues2.h \
- /usr/include/GLES2/gl2.h /usr/include/GLES2/gl2platform.h \
- /usr/include/KHR/khrplatform.h \
+ /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ iGLUes2/libtess/geom.h iGLUes2/libtess/mesh.h \
+ ../src/iGLUes2/include/glues2.h /usr/include/GLES2/gl2.h \
+ /usr/include/GLES2/gl2platform.h /usr/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
@@ -117,8 +113,6 @@ iGLUes2/libtess/libftgles2_la-tessmono.lo: iGLUes2/libtess/tessmono.c \
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
-/usr/include/x86_64-linux-gnu/bits/select2.h:
-
 /usr/include/x86_64-linux-gnu/sys/sysmacros.h:
 
 /usr/include/x86_64-linux-gnu/bits/sysmacros.h:
@@ -131,11 +125,7 @@ iGLUes2/libtess/libftgles2_la-tessmono.lo: iGLUes2/libtess/tessmono.c \
 
 /usr/include/alloca.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
 iGLUes2/libtess/geom.h:
 
