@@ -96,6 +96,8 @@ FTGL_BEGIN_C_DECLS
  * @see  FTGLfont
  */
 FTGL_EXPORT FTGLfont *ftglCreateTextureFont(const char *file);
+FTGL_EXPORT FTGLfont *ftglCreateTextureFontData(const  unsigned char *pBufferBytes,
+                              size_t bufferSizeInBytes);
 
 FTGL_END_C_DECLS
 

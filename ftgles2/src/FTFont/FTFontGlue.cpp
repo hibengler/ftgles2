@@ -49,6 +49,8 @@ FTGL_BEGIN_C_DECLS
         return ftgl; \
     }
 
+
+
 // FTBitmapFont::FTBitmapFont();
 C_TOR(ftglCreateBitmapFont, (const char *fontname),
       FTBitmapFont, (fontname), FONT_BITMAP);
@@ -73,9 +75,15 @@ C_TOR(ftglCreatePixmapFont, (const char *fontname),
 C_TOR(ftglCreatePolygonFont, (const char *fontname),
       FTPolygonFont, (fontname), FONT_POLYGON);
 
+C_TOR(ftglCreatePolygonFontData, (const  unsigned char *pBufferBytes,size_t bufferSizeInBytes),
+      FTPolygonFont, (pBufferBytes,bufferSizeInBytes), FONT_POLYGON);
+
 // FTTextureFont::FTTextureFont();
 C_TOR(ftglCreateTextureFont, (const char *fontname),
       FTTextureFont, (fontname), FONT_TEXTURE);
+
+C_TOR(ftglCreateTextureFontData, (const  unsigned char *pBufferBytes,size_t bufferSizeInBytes),
+      FTTextureFont, (pBufferBytes,bufferSizeInBytes), FONT_TEXTURE);
 
 // FTCustomFont::FTCustomFont();
 class FTCustomFont : public FTFont
